@@ -83,13 +83,13 @@ a{
     padding-left: 40px;
     padding-right: 40px;
 }
-.row{
+.contact_row{
     display: flex;
 }
-.column{
+.contact_column{
     flex:1;
     text-align: center;
 }
-.column a{
+.contact_column a{
     text-decoration: underline;
 }
