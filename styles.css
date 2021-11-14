@@ -76,7 +76,29 @@ a{
     margin-top: 1rem;
 }
 
-.gallery{
+#about{
+    padding:5em 0;
+    text-align: center;
+}
+.about_content{
+    max-width: 760px;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#about h3{
+    margin-bottom: 1em;
+    opacity: .5;
+}
+#about h2{
+    font-size: 3.375em;
+    margin-block-start: .83em;
+    margin-block-end: .83em;
+}
+
+
+#gallery{
     position: relative;
 }
 .slides{
