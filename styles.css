@@ -76,17 +76,60 @@ a{
     margin-top: 1rem;
 }
 
-.gallery_row > gallery_col{
-    padding: 0 8px;
+.gallery{
+    position: relative;
 }
-.gallery_row::after{
+.slides{
+    display: none;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background-color: red;
+}
+.number_text{
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.caption_container{
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+.gallery_row:after{
     content: '';
     display: table;
     clear: both;
 }
 .gallery_col{
-    float: left;
+    float:left;
     width: 25%;
+}
+.dots{
+    opacity: 0.6;
+}
+.active, dots:hover{
+    opacity: 1;
 }
 
 #contact{

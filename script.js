@@ -18,7 +18,7 @@ function show_slides(n){
     if (n > slides.length){
         slide_index = 1;
     }
-    
+
     if (n < 1){
         slide_index = slides.length;
     }
@@ -28,10 +28,10 @@ function show_slides(n){
     }
 
     for (i=0; i<dots.length; i++){
-        dots[i].className = dots[i].className.replace('active', '');
+        dots[i].className = dots[i].className.replace(' active', '');
     }
 
     slides[slide_index - 1].style.display="block";
-    dots[slide_index - 1].className += "active";
+    dots[slide_index - 1].className += " active";
     caption.innerHTML = dots[slide_index - 1].alt;
 }
