@@ -11,9 +11,9 @@ function current_Slide(n){
 
 function show_slides(n){
     let i;
-    let slides = document.querySelector('slides');
-    let dots = document.querySelector('dots');
-    let caption = document.querySelector('caption');
+    let slides = document.getElementsByClassName('slides');
+    let dots = document.getElementsByClassName('dots');
+    let caption = document.getElementById('caption');
 
     if (n > slides.length){
         slide_index = 1;
