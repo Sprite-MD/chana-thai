@@ -76,6 +76,19 @@ a{
     margin-top: 1rem;
 }
 
+.gallery_row > gallery_col{
+    padding: 0 8px;
+}
+.gallery_row::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.gallery_col{
+    float: left;
+    width: 25%;
+}
+
 #contact{
     display:block;
     margin-left: auto;
