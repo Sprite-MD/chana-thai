@@ -1,37 +1,40 @@
-let slide_index = 1;
-show_slides(slide_index);
-
-function plus_slide(n){
-    show_slides(slide_index += n);
+function openModal(){
+    document.getElementById("myModal").style.display = "block";
 }
 
-function current_Slide(n){
-    show_slides(slide_index = n);
+function closeModal(){
+    document.getElementById("myModal").style.display = "none";
 }
 
-function show_slides(n){
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plus_slides(n){
+    showSlides(slideIndex += n);
+}
+
+function current_slide(n){
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n){
     let i;
-    let slides = document.getElementsByClassName('slides');
-    let dots = document.getElementsByClassName('dots');
-    let caption = document.getElementById('caption');
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captiontext = document.getElementById("caption");
 
-    if (n > slides.length){
-        slide_index = 1;
+    if(n > slides.length){
+        slideIndex = 1;
     }
 
-    if (n < 1){
-        slide_index = slides.length;
+    if(n < 1){
+        slides[i].style.display = "none"
     }
 
-    for (i=0; i < slides.length; i++){
-        slides[i].style.display =  'none';
+    for(i=0; i<dots.length; i++){
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-
-    for (i=0; i<dots.length; i++){
-        dots[i].className = dots[i].className.replace(' active', '');
-    }
-
-    slides[slide_index - 1].style.display="block";
-    dots[slide_index - 1].className += " active";
-    caption.innerHTML = dots[slide_index - 1].alt;
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captiontext.innerHTML = dots[slideIndex - 1].alt;
 }

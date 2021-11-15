@@ -7,8 +7,6 @@
     </head>
 
     <body>
-        <script src="script.js"></script>    
-
         <nav id='navbar'>
             <a id='logo' href='#home'>
                 <img src='images/logo.png' alt='Chana Thai'>
@@ -56,49 +54,75 @@
 
         <div id='gallery'>
             <!-- Images that go into gallery -->
-            <div class='slides'>
-                <div class='number_text'> 1 / 4 </div>
-                    <img src="images/lightbox/boatNoodle.jpg" style='width:100%'>
-            </div>
-            <div class='slides'>
-                <div class='number_text'> 2 / 4 </div>
-                    <img src="images/lightbox/chickenFR.jpg" style='width:100%'>
-            </div>
-            <div class='slides'>
-                <div class='number_text'> 3 / 4 </div>
-                    <img src="images/lightbox/chickenSatay.jpg" style='width:100%'>
-            </div>
-            <div class='slides'>
-                <div class='number_text'> 4 / 4 </div>
-                    <img src="images/lightbox/duck.jpg" style='width:100%'>
+            <div class='row'>
+                <div class='column'>
+                    <img src='images/lightbox/boatNoodle.jpg' onclick='openModal(); currentSlide(1)' class='hover-shadow'>
+                </div>
+                <div class='column'>
+                    <img src='images/lightbox/duck.jpg' onclick='openModal(); currentSlide(2)' class='hover-shadow'>
+                </div>
+                <div class='column'>
+                    <img src='images/lightbox/chickenFR.jpg' onclick='openModal(); currentSlide(3)' class='hover-shadow'>
+                </div>
+                <div class='column'>
+                    <img src='images/lightbox/chickenSatay.jpg' onclick='openModal(); currentSlide(4)' class='hover-shadow'>
+                </div>                
             </div>
 
-            <!-- Next/Prev Buttons -->
-            <a class='prev' onclick='plus_slide(-1)'> &#10094 </a>
-            <a class='next' onclick='plus_slide(1)'> &#10095 </a>
+            <!-- Modal/lightbox -->
+            <div id='myModal' class='modal'>
+                <span class='close cursor' onclick='closeModal()'> &times; </span>
+                <div class='modal-content'>
 
-            <!-- Img Text -->
-            <div class='caption_container'>
-                <p id='caption'></p>
-            </div>
+                    <div class='mySlides'>
+                        <div class='numbertext'> 1 / 4 </div>
+                        <img src='images/lightbox/boatNoodle.jpg' style='width:100%'>
+                    </div>
 
-            <!-- Thumbnail img -->
-            <div class='gallery_row'>
-                <div class='gallery_col'>
-                    <img class='dots' src='images/lightbox/boatNoodle.jpg' style='width:100%' onclick='current_Slide(1)' alt='noodles'>
-                </div>
-                <div class='gallery_col'>
-                    <img class='dots' src='images/lightbox/chickenFR.jpg' style='width:100%' onclick='current_Slide(2)' alt='noodles'>
-                </div>
-                <div class='gallery_col'>
-                    <img class='dots' src='images/lightbox/chickenSatay.jpg' style='width:100%' onclick='current_Slide(3)' alt='noodles'>
-                </div>
-                <div class='gallery_col'>
-                    <img class='dots' src='images/lightbox/duck.jpg' style='width:100%' onclick='current_Slide(4)' alt='noodles'>
-                </div>
+                    <div class='mySlides'>
+                        <div class='numbertext'> 2 / 4 </div>
+                        <img src='images/lightbox/duck.jpg' style='width:100%'>
+                    </div>
 
+                    <div class='mySlides'>
+                        <div class='numbertext'> 3 / 4 </div>
+                        <img src='images/lightbox/chickenFR.jpg' style='width:100%'>
+                    </div>
+
+                    <div class='mySlides'>
+                        <div class='numbertext'> 4 / 4 </div>
+                        <img src='images/lightbox/chickenSatay.jpg' style='width:100%'>
+                    </div>
+                
+                    <!-- Next/Prev Buttons -->
+                    <a class='prev' onclick='plusSlides(-1)'> &#10094; </a>
+                    <a class='next' onclick='plusSlides(1)'> &#10095; </a>
+
+                    <!-- Img Text -->
+                    <div class='caption_container'>
+                        <p id='caption'></p>
+                    </div>
+
+                    <!-- Thumbnail img -->
+                    <div class='column'>
+                        <img class='demo' src='images/lightbox/duck.jpg' onclick='currentSlide(1)'>
+                    </div>
+
+                    <div class='column'>
+                        <img class='demo' src='images/lightbox/boatNoodle.jpg' onclick='currentSlide(2)'>
+                    </div>
+                    
+                    <div class='column'>
+                        <img class='demo' src='images/lightbox/chickenFR.jpg' onclick='currentSlide(3)'>
+                    </div>
+
+                    <div class='column'>
+                        <img class='demo' src='images/lightbox/chickenSatay.jpg' onclick='currentSlide(4)'>
+                    </div>
+                </div>
             </div>
         </div>
+
 
         <div id='contact'>
             <div class='contact_row'>
@@ -119,5 +143,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="script.js"></script>    
     </body>
 </html>
