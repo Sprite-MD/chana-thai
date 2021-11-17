@@ -17,12 +17,12 @@ a{
     top: 0px;
     left: 0px;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
     background-color: orange;
+    align-items: center;
 }
 #navbar img{
     height: 75px;
-    padding: 7px;
 }
 .nav_btns{
     display: flex;
@@ -41,7 +41,7 @@ a{
 .hero{
     display: flex;
     position: relative;
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -102,19 +102,9 @@ a{
     width: 100%;
   }
   
-  .row {
+.row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .row > .col {
-    padding: 0 8px;
-  }
-  
-  .col {
-    float: left;
-    width: 25%;
   }
   
   /* Now you want to define what the lightbox will look like. Note that you have the display
@@ -132,6 +122,7 @@ a{
     height: 100%;
     overflow: auto;
     background-color: black;
+     z-index: 20; 
   }
   
   .modal-content {
@@ -143,8 +134,8 @@ a{
     padding: 0 0 0 0;
     width: 80%;
     max-width: 1200px;
+    height: 80%;
   }
-  
   /* Same with your slides, you set the display to none, because you want to choose which 
      one is shown at a time. */
   
@@ -166,7 +157,8 @@ a{
     justify-content: space-between;
   }
   .col{
-      width: 33.33%;
+      width: auto;
+      height: auto;
   }
   
   /* You want the previews a little transparent to show that they are "inactive". 
@@ -175,13 +167,13 @@ a{
    */
   
   img.preview, img.modal-preview {
-    opacity: 0.6;
+    opacity: 1;
   }
   
   img.active,
   .preview:hover,
   .modal-preview:hover {
-    opacity: 1;
+    opacity: .6;
   }
   
   img.hover-shadow {
@@ -193,12 +185,13 @@ a{
   } 
   
   .close {
-    color: white;
+    color: rgb(204, 179, 179);
     position: absolute;
     top: 10px;
-    right: 25px;
+    right: 150px;
     font-size: 35px;
     font-weight: bold;
+    z-index: 110;
   }
   
   .close:hover,
@@ -210,11 +203,12 @@ a{
   
   .previous,
   .next {
+    align-self: stretch;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 0;
     width: auto;
-    padding: 16px;
+    padding: 387px 30px;
     margin-top: -50px;
     color: white;
     font-weight: bold;
@@ -242,6 +236,9 @@ a{
     margin-right: auto;
     padding-left: 40px;
     padding-right: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 1300px;
 }
 .contact_row{
     display: flex;
