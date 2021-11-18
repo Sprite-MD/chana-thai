@@ -98,4 +98,9 @@ const drinks_desserts = [];
 // const json_app = JSON.stringify(appetizers);
 
 const menu = document.querySelector('#menu');
-const app_menu = document.createAttribute('div');
+const appetizer_menu = document.createElement('div');
+appetizer_menu.setAttribute('class', 'appetizers menu');
+menu.appendChild(appetizer_menu);
+
+
+

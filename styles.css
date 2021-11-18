@@ -100,12 +100,13 @@ a{
 #menu{
   display: flex;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .categories{
   align-content: center;
   justify-content: center;
 }
+
 
 
 
