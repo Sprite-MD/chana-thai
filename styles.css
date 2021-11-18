@@ -79,6 +79,7 @@ a{
 #about{
     padding:5em 0;
     text-align: center;
+    background-color: rgb(226, 146, 27);
 }
 .about_content{
     max-width: 760px;
@@ -99,12 +100,35 @@ a{
 
 #menu{
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
+}
+.buttons{
+  align-content: center;
+  justify-content: center;
+  align-self: center;
 }
 .categories{
   align-content: center;
   justify-content: center;
+}
+.menu_card{
+  display: flex;
+  flex-direction: column;
+  border:1px solid white;
+  justify-content: center;
+  align-content: center;
+  width: 500px;
+  text-align: center;
+  align-self: center;
+}
+.food_item_top{
+  display: flex;
+  justify-content: space-between;
+}
+.food_item_top div{
+  align-self: center;
 }
 
 

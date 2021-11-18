@@ -65,7 +65,7 @@
         "price":11.5
     },
     {
-        "name":" Combination Appetizer",
+        "name":"Combination Appetizer",
         "description":"Two butterfly shrimps, two egg rolls, five fried wontons. Served with sweet & sour sauce.",
         "price":11.5
     }

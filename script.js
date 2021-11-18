@@ -93,14 +93,14 @@ const drinks_desserts = [];
 // appetizers.push( new Menu('Satay Chicken','Sliced chicken on skewers, marinated in a mixture of Thai spices and coconut milk grilled, served with cucumber salad and peanut sauce.', 10.50));
 // appetizers.push( new Menu('Shrimp Cake','Deep fried mixed shrimp paste served with ground shrimp and water chestnut, with sweet & sour sauce.', 11.50));
 // appetizers.push( new Menu('Golden Wings','Deep-fried stuffed chicken wing with ground chicken and water chestnut, served wih sweet and sour sauce, topped with ground peanut and cucumber.', 11.50));
-// appetizers.push( new Menu(' Combination Appetizer','Two butterfly shrimps, two egg rolls, five fried wontons. Served with sweet & sour sauce.', 11.50));
+// appetizers.push( new Menu('Combination Appetizer','Two butterfly shrimps, two egg rolls, five fried wontons. Served with sweet & sour sauce.', 11.50));
 
 // const json_app = JSON.stringify(appetizers);
 
 const menu = document.querySelector('#menu');
 const appetizer_menu = document.createElement('div');
 appetizer_menu.setAttribute('class', 'appetizers menu');
-menu.appendChild(appetizer_menu);
+menu.appendChild(appetizer_menu); 
 
 
 
