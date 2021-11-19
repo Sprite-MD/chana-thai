@@ -112,6 +112,10 @@ a{
 .categories{
   align-content: center;
   justify-content: center;
+  padding: 8px;
+  margin: 10px;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 .menu_card{
   display: flex;
@@ -122,6 +126,7 @@ a{
   width: 500px;
   text-align: center;
   align-self: center;
+  margin-bottom: 3rem;
 }
 .food_item_top{
   display: flex;
