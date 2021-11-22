@@ -52,7 +52,7 @@ function download(content, fileName, contentType) {
   
   // Attempt at importing menu data from external file
   
-  import { food } from "./menu_data";
+  import { food } from "./menu_data.js";
   
   const app_btn = document.querySelector('.appetizers');
   function insert(){
@@ -71,13 +71,13 @@ function download(content, fileName, contentType) {
       const food_top = document.createElement('div');
       food_top.classList.add('food_item_top');
       const food_name = document.createElement('h3');
-      food_name.textContent = 'food[0].name';
+      food_name.textContent = food[0].name;
   
       const price = document.createElement('div');
-      price.textContent = 'food[0].price';
+      price.textContent = food[0].price;
   
       const food_description = document.createElement('p');
-      food_description.textContent = 'food[0].description';
+      food_description.textContent = food[0].description;
   
       food_top.appendChild(food_name);
       food_top.appendChild(price);
