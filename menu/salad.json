@@ -1,0 +1,68 @@
+{
+	"name":"Salad",
+	"description":"",
+	"items":[{
+		"number":14,
+		"name":"House Salad",
+		"price":10.50,
+		"description":"Hard boiled egg, fresh lettuce, cucumber, tomatoes, onion, carrot. Served with peanut dressing.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":15,
+		"name":"Thai Salad",
+		"price":11.50,
+		"description":"White chicken, hard boiled egg, fresh lettuce, cucumber, tomatoes, onion, carrot. Served with home made Thai salad dressing.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":16,
+		"name":"Yum-Yai Salad",
+		"price":12.50,
+		"description":"Shrimp and white chicken, hard boiled egg, lettuce, onion, cucumber, tomatoes, carrot, cilantro. Served with ground peanut in plum sauce.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":17,
+		"name":"Spicy Beef or Chicken Salad",
+		"price":12.50,
+		"description":"Sliced beef or white chicken with cucumber, red onion, green onion, tomatoes, and cilantro mixed with spicy lime juice, served with fresh salad.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":18,
+		"name":"Larb Chicken",
+		"price":12.50,
+		"description":"Ground chicken, onion, cilantro, and roated rice in spicy lime juice, served with fresh salad.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":19,
+		"name":"Spicy Shrimp Salad",
+		"price":13.50,
+		"description":"Grilled shrimp with cucumber, onion, tomatoes and spicy lime dressing, served with fresh salad.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":20,
+		"name":"Silver Noodle Salad",
+		"price":13.50,
+		"description":"Silver noodle, ground chicken, shrimp, onion, tomatoes, and cilantro, mixed with spicy lime juice, served wiith fresh salad.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":21,
+		"name":"Spicy Seafood Salad",
+		"price":17.50,
+		"description":"Shrimp, squid, fish, scallop, mussels, imitation crab, ginger, onion, cucumber, tomatoes, and basil with spicy lime juice, served with fresh salad.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":22,
+		"name":"Grilled Salmon Salad",
+		"price":15.50,
+		"description":"Grilled fresh salmon with fresh salad and sesame ginger dressing.",
+		"image":"/img/no_image.gif"
+		}
+	]
+}

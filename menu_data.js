@@ -1,4 +1,4 @@
-let food = [
+let appetizers = [
     {
         name:"Fried Wonton",
         description:"Deep fried wonton stuffed with ground chicken served with sweet & sour sauce.",
@@ -71,4 +71,4 @@ let food = [
     }
 ]
 
-export {food};
+export {appetizers};

@@ -1,0 +1,33 @@
+{
+    "name":"Dessert",
+    "description":"",
+    "items":[{
+        "number":"",
+        "name":"Fried Banana",
+        "price":5.00,
+        "description":"",
+        "image":"/img/no_image.gif"
+        },
+        {
+        "number":"",
+        "name":"Cheese Cake",
+        "price":5.00,
+        "description":"",
+        "image":"/img/no_image.gif"
+        },
+        {
+        "number":"",
+        "name":"Coconut Ice Cream",
+        "price":5.00,
+        "description":"",
+        "image":"/img/no_image.gif"
+        }
+        {
+        "number":"",
+        "name":"Mango Sticky Rice",
+        "price":9.50,
+        "description":"",
+        "image":"/img/no_image.gif"
+        }
+    ]
+}
