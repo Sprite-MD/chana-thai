@@ -9,16 +9,16 @@ function loadFile(filePath, done) {
     xhr.send();
 }
 
-let menu_count = 0
+let chef_count = 0
 // paths to all of your files
-const myFiles = [ "./menu_data/appetizers.json"];
+const chef_files = [ "./menu_data/chefspecials.json"];
 // where you want to store the data
-const app_data = [];
+const chef_data = [];
 
 
 
 // loop through each file
-myFiles.forEach((file, i) => {
+chef_files.forEach((file, i) => {
     // and call loadFile
     // note how a function is passed as the second parameter
     // that's the callback function
@@ -27,13 +27,13 @@ myFiles.forEach((file, i) => {
         // will not necessarily come in order
         // so we can't use JSONdata.push(JSON.parse(responseText));
         // if the order doesn't matter, you can use push
-        app_data[i] = JSON.parse(responseText);
+        chef_data[i] = JSON.parse(responseText);
         // or you could choose not to store it in an array.
         // whatever you decide to do with it, it is available as
         // responseText within this scope (unparsed!)
-        menu_count += 1;
+        chef_count += 1;
 
-        if (menu_count == myFiles.length){
+        if (chef_count == chef_files.length){
             display();
         } 
         
@@ -43,36 +43,36 @@ myFiles.forEach((file, i) => {
 // All actions must be done in this function
 function display(){
 
-    const app_btn = document.querySelector('.appetizers');
+    const app_btn = document.querySelector('.chef_special');
     const menu = document.querySelector('#menu');
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
 
-    function insert_appetizers(){
+    function insert_chef(){
         // creates menu card with title
         const menu_card = document.createElement('div');
         menu_card.classList.add('menu_card');
     
         const card_category = document.createElement('h1');
-        card_category.textContent = app_data[0].name;
+        card_category.textContent = chef_data[0].name;
         menu_card.appendChild(card_category);
     
 
-        for (let i=0; i < app_data[0].items.length / 2; i++){
+        for (let i=0; i < chef_data[0].items.length / 3 - 1; i++){
             const food_item = document.createElement('div');
             food_item.classList.add('food_item');
         
             const food_top = document.createElement('div');
             food_top.classList.add('food_item_top');
             const food_name = document.createElement('h3');
-            food_name.textContent = app_data[0].items[i].name;
+            food_name.textContent = chef_data[0].items[i].name;
         
             const price = document.createElement('div');
-            price.textContent = app_data[0].items[i].price;
+            price.textContent = chef_data[0].items[i].price;
         
             const food_description = document.createElement('p');
-            food_description.textContent = app_data[0].items[i].description;
+            food_description.textContent = chef_data[0].items[i].description;
         
             food_top.appendChild(food_name);
             food_top.appendChild(price);
@@ -85,30 +85,30 @@ function display(){
         menu.appendChild(menu_row); 
     }
 
-    function insert_app2(){
+    function insert_chef2(){
         const menu_card = document.createElement('div');
         menu_card.classList.add('menu_card');
 
     
         const card_category = document.createElement('h1');
-        card_category.textContent = app_data[0].name;
+        card_category.textContent = chef_data[0].name;
         menu_card.appendChild(card_category);
     
 
-        for (let i=7; i < app_data[0].items.length; i++){
+        for (let i=5; i < (chef_data[0].items.length / 3) + (chef_data[0].items.length/ 3); i++){
             const food_item = document.createElement('div');
             food_item.classList.add('food_item');
         
             const food_top = document.createElement('div');
             food_top.classList.add('food_item_top');
             const food_name = document.createElement('h3');
-            food_name.textContent = app_data[0].items[i].name;
+            food_name.textContent = chef_data[0].items[i].name;
         
             const price = document.createElement('div');
-            price.textContent = app_data[0].items[i].price;
+            price.textContent = chef_data[0].items[i].price;
         
             const food_description = document.createElement('p');
-            food_description.textContent = app_data[0].items[i].description;
+            food_description.textContent = chef_data[0].items[i].description;
         
             food_top.appendChild(food_name);
             food_top.appendChild(price);
@@ -122,6 +122,43 @@ function display(){
 
     }
     
-    app_btn.addEventListener('click', insert_appetizers);
-    app_btn.addEventListener('click', insert_app2);
+    function insert_chef3(){
+        const menu_card = document.createElement('div');
+        menu_card.classList.add('menu_card');
+
+    
+        const card_category = document.createElement('h1');
+        card_category.textContent = chef_data[0].name;
+        menu_card.appendChild(card_category);
+    
+
+        for (let i=11; i < chef_data[0].items.length; i++){
+            const food_item = document.createElement('div');
+            food_item.classList.add('food_item');
+        
+            const food_top = document.createElement('div');
+            food_top.classList.add('food_item_top');
+            const food_name = document.createElement('h3');
+            food_name.textContent = chef_data[0].items[i].name;
+        
+            const price = document.createElement('div');
+            price.textContent = chef_data[0].items[i].price;
+        
+            const food_description = document.createElement('p');
+            food_description.textContent = chef_data[0].items[i].description;
+        
+            food_top.appendChild(food_name);
+            food_top.appendChild(price);
+            food_item.appendChild(food_top);
+            food_item.appendChild(food_description);
+            menu_card.appendChild(food_item);
+        }
+
+        menu_row.appendChild(menu_card);
+        menu.appendChild(menu_row); 
+
+    }
+    app_btn.addEventListener('click', insert_chef);
+    app_btn.addEventListener('click', insert_chef2);
+    app_btn.addEventListener('click', insert_chef3);
 }

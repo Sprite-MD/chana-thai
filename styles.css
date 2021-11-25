@@ -123,8 +123,6 @@ a{
 }
 .menu_row{
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
   margin:5rem;
 }
@@ -136,9 +134,10 @@ a{
   align-content: center;
   width: 500px;
   text-align: center;
-  align-self: center;
+  align-self: flex-start;
   margin-bottom: 3rem;
-  margin: 0 3rem;
+  margin: 0 5rem;
+  padding-bottom: 2rem;
 }
 .food_item_top{
   display: flex;
@@ -164,8 +163,8 @@ a{
 .preview {
     width: 100%;
 }
-.gallery_img{
-  width: 100vw;
+.gallery_img img{
+  vertical-align: bottom;
 }
 .gallery_row {
     display: flex;
@@ -298,13 +297,10 @@ img.hover-shadow {
 
 #contact{
     display:block;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 40px;
     padding-right: 40px;
     align-items: center;
     justify-content: center;
-    width: auto;
 }
 .contact_row{
     display: flex;
