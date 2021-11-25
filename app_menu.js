@@ -94,7 +94,8 @@ function display(){
         card_category.textContent = app_data[0].name;
         menu_card.appendChild(card_category);
     
-
+        
+        // change i for different midpoint
         for (let i=7; i < app_data[0].items.length; i++){
             const food_item = document.createElement('div');
             food_item.classList.add('food_item');
