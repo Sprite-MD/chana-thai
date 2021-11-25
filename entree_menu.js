@@ -9,9 +9,9 @@ function loadFile(filePath, done) {
     xhr.send();
 }
 
-let menu_count = 0
+let entree_count = 0
 // paths to all of your files
-const entree_data = [ "./menu/noodles.json","./menu/rice.json", "./menu/curry.json"];
+const entree_data = [ "./menu_data/noodles.json","./menu_data/rice.json", "./menu_data/curry.json"];
 // where you want to store the data
 const app_data = [];
 
@@ -31,9 +31,9 @@ entree_data.forEach((file, i) => {
         // or you could choose not to store it in an array.
         // whatever you decide to do with it, it is available as
         // responseText within this scope (unparsed!)
-        menu_count += 1;
+        entree_count += 1;
 
-        if (menu_count == entree_data.length){
+        if (entree_count == entree_data.length){
             display();
         } 
         

@@ -9,16 +9,16 @@ function loadFile(filePath, done) {
     xhr.send();
 }
 
-let ss_count = 0
+let dd_count = 0
 // paths to all of your files
-const soup_salad_files = ["./menu_data/salad.json", "./menu_data/soup.json" ];
+const drink_dessert_files = ["./menu_data/beverages.json", "./menu_data/dessert.json" ];
 // where you want to store the data
-const soup_salad_data = [];
+const drink_dessert_data = [];
 
 
 
 // loop through each file
-soup_salad_files.forEach((file, i) => {
+drink_dessert_files.forEach((file, i) => {
     // and call loadFile
     // note how a function is passed as the second parameter
     // that's the callback function
@@ -27,13 +27,13 @@ soup_salad_files.forEach((file, i) => {
         // will not necessarily come in order
         // so we can't use JSONdata.push(JSON.parse(responseText));
         // if the order doesn't matter, you can use push
-        soup_salad_data[i] = JSON.parse(responseText);
+        drink_dessert_data[i] = JSON.parse(responseText);
         // or you could choose not to store it in an array.
         // whatever you decide to do with it, it is available as
         // responseText within this scope (unparsed!)
-        ss_count += 1;
+        dd_count += 1;
 
-        if (ss_count == soup_salad_files.length){
+        if (dd_count == drink_dessert_files.length){
             display();
         } 
         
@@ -42,36 +42,41 @@ soup_salad_files.forEach((file, i) => {
 
 // All actions must be done in this function
 function display(){
-    const soup_salad_btn = document.querySelector('.soup_salad');
+    const drink_dessert_btn = document.querySelector('.drink_dessert');
     const menu = document.querySelector('#menu');
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
 
-    function insert_soup(){
+    function insert_drinks(){
         // creates menu card with title
         const menu_card = document.createElement('div');
         menu_card.classList.add('menu_card');
     
         const card_category = document.createElement('h1');
-        card_category.textContent = soup_salad_data[0].name;
+        card_category.textContent = drink_dessert_data[0].name;
         menu_card.appendChild(card_category);
     
 
-        for (let i=0; i < soup_salad_data[0].items.length; i++){
+        for (let i=0; i < drink_dessert_data[0].items.length; i++){
             const food_item = document.createElement('div');
             food_item.classList.add('food_item');
         
             const food_top = document.createElement('div');
             food_top.classList.add('food_item_top');
             const food_name = document.createElement('h3');
-            food_name.textContent = soup_salad_data[0].items[i].name;
+            food_name.textContent = drink_dessert_data[0].items[i].name;
         
             const price = document.createElement('div');
-            price.textContent = soup_salad_data[0].items[i].price;
-        
+            // Accounts for different prices for different sizes
+            if (drink_dessert_data[0].items[i].large == undefined){
+                price.textContent = drink_dessert_data[0].items[i].price;
+            } else {
+            price.textContent = ` ${drink_dessert_data[0].items[i].price} | ${drink_dessert_data[0].items[i].large}`;
+            }
+
             const food_description = document.createElement('p');
-            food_description.textContent = soup_salad_data[0].items[i].description;
+            food_description.textContent = drink_dessert_data[0].items[i].description;
         
             food_top.appendChild(food_name);
             food_top.appendChild(price);
@@ -84,31 +89,31 @@ function display(){
         menu.appendChild(menu_row); 
     }
 
-    // For salad
-    function insert_salad(){
+
+    function insert_desserts(){
         const menu_card = document.createElement('div');
         menu_card.classList.add('menu_card');
 
     
         const card_category = document.createElement('h1');
-        card_category.textContent = soup_salad_data[1].name;
+        card_category.textContent = drink_dessert_data[1].name;
         menu_card.appendChild(card_category);
     
 
-        for (let i=0; i < soup_salad_data[1].items.length; i++){
+        for (let i=0; i < drink_dessert_data[1].items.length; i++){
             const food_item = document.createElement('div');
             food_item.classList.add('food_item');
         
             const food_top = document.createElement('div');
             food_top.classList.add('food_item_top');
             const food_name = document.createElement('h3');
-            food_name.textContent = soup_salad_data[1].items[i].name;
+            food_name.textContent = drink_dessert_data[1].items[i].name;
         
             const price = document.createElement('div');
-            price.textContent = soup_salad_data[1].items[i].price;
+            price.textContent = drink_dessert_data[1].items[i].price;
         
             const food_description = document.createElement('p');
-            food_description.textContent = soup_salad_data[1].items[i].description;
+            food_description.textContent = drink_dessert_data[1].items[i].description;
         
             food_top.appendChild(food_name);
             food_top.appendChild(price);
@@ -122,6 +127,6 @@ function display(){
 
     }
     
-    soup_salad_btn.addEventListener('click', insert_soup);
-    soup_salad_btn.addEventListener('click', insert_salad);
+    drink_dessert_btn.addEventListener('click', insert_drinks);
+    drink_dessert_btn.addEventListener('click', insert_desserts);
 }

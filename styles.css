@@ -11,6 +11,7 @@ a{
     text-decoration: none;
 }
 
+
 #navbar{
     display: flex;
     position: fixed;
@@ -37,7 +38,6 @@ a{
     margin: 40px;
     list-style-type: none;
 }
-
 
 .hero{
     display: flex;
@@ -76,7 +76,7 @@ a{
     font-weight: 200;
     margin-top: 1rem;
 }
-
+ 
 
 #about{
     padding:5em 0;
@@ -156,14 +156,16 @@ a{
 
 
 
-
+#gallery{
+  display: flex;
+  flex-direction: column;
+}
 .preview {
     width: 100%;
   }
   
 .row {
     display: flex;
-    flex-direction: row;
   }
   
   /* Now you want to define what the lightbox will look like. Note that you have the display
@@ -287,6 +289,7 @@ a{
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+
 
 
 #contact{
