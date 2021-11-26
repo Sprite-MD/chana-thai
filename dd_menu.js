@@ -80,8 +80,10 @@ function display(){
         
             food_top.appendChild(food_name);
             food_top.appendChild(price);
+
             food_item.appendChild(food_top);
             food_item.appendChild(food_description);
+            
             menu_card.appendChild(food_item);
         }
 
@@ -117,8 +119,10 @@ function display(){
         
             food_top.appendChild(food_name);
             food_top.appendChild(price);
+
             food_item.appendChild(food_top);
             food_item.appendChild(food_description);
+
             menu_card.appendChild(food_item);
         }
 

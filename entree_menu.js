@@ -76,8 +76,10 @@ function display(){
         
             food_top.appendChild(food_name);
             food_top.appendChild(price);
+
             food_item.appendChild(food_top);
             food_item.appendChild(food_description);
+
             menu_card.appendChild(food_item);
         }
 
@@ -85,7 +87,6 @@ function display(){
         menu.appendChild(menu_row); 
     }
 
-    // For salad
     function insert_rice(){
         const menu_card = document.createElement('div');
         menu_card.classList.add('menu_card');
@@ -113,8 +114,10 @@ function display(){
         
             food_top.appendChild(food_name);
             food_top.appendChild(price);
+
             food_item.appendChild(food_top);
             food_item.appendChild(food_description);
+            
             menu_card.appendChild(food_item);
         }
 
