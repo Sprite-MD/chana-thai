@@ -1,6 +1,8 @@
 # chana-thai
 
-Freelance web developing for a thai restaurant. Programmed with HTML, CSS, and JavaScript to build experience. Implemented a single-page application as a design choice.
+Freelance web developing for a thai restaurant. Programmed with HTML, CSS, and JavaScript to build experience. Implemented a single-page application as a design choice.  
+No frameworks were used to build a better understanding of web development.  
+
 
 Features:  
 A fixed navbar at the top of the page that follows the user when they scroll down the page.  
