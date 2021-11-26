@@ -34,14 +34,14 @@ soup_salad_files.forEach((file, i) => {
         ss_count += 1;
 
         if (ss_count == soup_salad_files.length){
-            display();
+            display_ss();
         } 
         
     })
 });
 
 // All actions must be done in this function
-function display(){
+function display_ss(){
     const soup_salad_btn = document.querySelector('.soup_salad');
     const menu = document.querySelector('#menu');
 

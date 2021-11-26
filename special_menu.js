@@ -34,14 +34,14 @@ lunch_combo_files.forEach((file, i) => {
         ss_count += 1;
 
         if (ss_count == lunch_combo_files.length){
-            display();
+            display_specials();
         } 
         
     })
 });
 
 // All actions must be done in this function
-function display(){
+function display_specials(){
     const soup_salad_btn = document.querySelector('.lunch_combo');
     const menu = document.querySelector('#menu');
 

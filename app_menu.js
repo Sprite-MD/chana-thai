@@ -9,16 +9,16 @@ function loadFile(filePath, done) {
     xhr.send();
 }
 
-let menu_count = 0
+let app_count = 0
 // paths to all of your files
-const myFiles = [ "./menu_data/appetizers.json"];
+const app_data = [ "./menu_data/appetizers.json"];
 // where you want to store the data
 const app_data = [];
 
 
 
 // loop through each file
-myFiles.forEach((file, i) => {
+app_data.forEach((file, i) => {
     // and call loadFile
     // note how a function is passed as the second parameter
     // that's the callback function
@@ -31,17 +31,17 @@ myFiles.forEach((file, i) => {
         // or you could choose not to store it in an array.
         // whatever you decide to do with it, it is available as
         // responseText within this scope (unparsed!)
-        menu_count += 1;
+        app_count += 1;
 
-        if (menu_count == myFiles.length){
-            display();
+        if (app_count == app_data.length){
+            display_appetizers();
         } 
         
     })
 });
 
 // All actions must be done in this function
-function display(){
+function display_appetizers(){
 
     const app_btn = document.querySelector('.appetizers');
     const menu = document.querySelector('#menu');

@@ -18,14 +18,14 @@ sides_file.forEach((file, i) => {
         sides_count += 1;
 
         if (sides_count == sides_file.length){
-            display();
+            display_sides();
         } 
     })
 });
 
 
 // All actions must be done in this function
-function display(){
+function display_sides(){
 
     const sides_btn = document.querySelector('.sides');
     const menu = document.querySelector('#menu');

@@ -34,14 +34,14 @@ chef_files.forEach((file, i) => {
         chef_count += 1;
 
         if (chef_count == chef_files.length){
-            display();
+            display_chef();
         } 
         
     })
 });
 
 // All actions must be done in this function
-function display(){
+function display_chef(){
 
     const app_btn = document.querySelector('.chef_special');
     const menu = document.querySelector('#menu');

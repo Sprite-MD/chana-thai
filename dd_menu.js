@@ -34,14 +34,14 @@ drink_dessert_files.forEach((file, i) => {
         dd_count += 1;
 
         if (dd_count == drink_dessert_files.length){
-            display();
+            display_dd();
         } 
         
     })
 });
 
 // All actions must be done in this function
-function display(){
+function display_dd(){
     const drink_dessert_btn = document.querySelector('.drink_dessert');
     const menu = document.querySelector('#menu');
 

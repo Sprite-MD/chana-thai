@@ -34,14 +34,14 @@ entree_data.forEach((file, i) => {
         entree_count += 1;
 
         if (entree_count == entree_data.length){
-            display();
+            display_entree();
         } 
         
     })
 });
 
 // All actions must be done in this function
-function display(){
+function display_entree(){
     
     const app_btn = document.querySelector('.entrees');
     const menu = document.querySelector('#menu');
