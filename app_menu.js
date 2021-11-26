@@ -11,14 +11,14 @@ function loadFile(filePath, done) {
 
 let app_count = 0
 // paths to all of your files
-const app_data = [ "./menu_data/appetizers.json"];
+const app_files = [ "./menu_data/appetizers.json"];
 // where you want to store the data
 const app_data = [];
 
 
 
 // loop through each file
-app_data.forEach((file, i) => {
+app_files.forEach((file, i) => {
     // and call loadFile
     // note how a function is passed as the second parameter
     // that's the callback function

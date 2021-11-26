@@ -34,14 +34,14 @@ alacarte_file.forEach((file, i) => {
         ala_count += 1;
 
         if (ala_count == alacarte_file.length){
-            display();
+            display_alacarte();
         } 
         
     })
 });
 
 // All actions must be done in this function
-function display(){
+function display_alacarte(){
 
     const app_btn = document.querySelector('.alacarte');
     const menu = document.querySelector('#menu');

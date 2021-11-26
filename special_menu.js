@@ -42,7 +42,7 @@ lunch_combo_files.forEach((file, i) => {
 
 // All actions must be done in this function
 function display_specials(){
-    const soup_salad_btn = document.querySelector('.lunch_combo');
+    const specials_btn = document.querySelector('.lunch_combo');
     const menu = document.querySelector('#menu');
 
     const menu_row = document.createElement('div');
@@ -125,6 +125,6 @@ function display_specials(){
 
     }
     
-    soup_salad_btn.addEventListener('click', insert_lunch);
-    soup_salad_btn.addEventListener('click', insert_combo);
+    specials_btn.addEventListener('click', insert_lunch);
+    specials_btn.addEventListener('click', insert_combo);
 }

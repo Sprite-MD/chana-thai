@@ -43,7 +43,7 @@ chef_files.forEach((file, i) => {
 // All actions must be done in this function
 function display_chef(){
 
-    const app_btn = document.querySelector('.chef_special');
+    const chef_btn = document.querySelector('.chef_special');
     const menu = document.querySelector('#menu');
 
     const menu_row = document.createElement('div');
@@ -162,7 +162,7 @@ function display_chef(){
         menu.appendChild(menu_row); 
 
     }
-    app_btn.addEventListener('click', insert_chef);
-    app_btn.addEventListener('click', insert_chef2);
-    app_btn.addEventListener('click', insert_chef3);
+    chef_btn.addEventListener('click', insert_chef);
+    chef_btn.addEventListener('click', insert_chef2);
+    chef_btn.addEventListener('click', insert_chef3);
 }

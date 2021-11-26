@@ -43,7 +43,7 @@ entree_data.forEach((file, i) => {
 // All actions must be done in this function
 function display_entree(){
     
-    const app_btn = document.querySelector('.entrees');
+    const entree_btn = document.querySelector('.entrees');
     const menu = document.querySelector('#menu');
 
     const menu_row = document.createElement('div');
@@ -163,7 +163,7 @@ function display_entree(){
 
     }
     
-    app_btn.addEventListener('click', insert_noodles);
-    app_btn.addEventListener('click', insert_rice);
-    app_btn.addEventListener('click', insert_curry);
+    entree_btn.addEventListener('click', insert_noodles);
+    entree_btn.addEventListener('click', insert_rice);
+    entree_btn.addEventListener('click', insert_curry);
 }
