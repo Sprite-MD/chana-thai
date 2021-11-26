@@ -54,7 +54,7 @@ function display(){
         menu_card.classList.add('menu_card');
     
         const card_category = document.createElement('h1');
-        card_category.textContent = lunch_combo_data[0].name;
+        card_category.textContent = lunch_combo_data[0].name + "  $" + lunch_combo_data[0].items[0].price;
         menu_card.appendChild(card_category);
     
 
@@ -67,14 +67,14 @@ function display(){
             const food_name = document.createElement('h3');
             food_name.textContent = lunch_combo_data[0].items[i].name;
         
-            const price = document.createElement('div');
-            price.textContent = lunch_combo_data[0].items[i].price;
+            // const price = document.createElement('div');
+            // price.textContent = lunch_combo_data[0].items[i].price;
         
             const food_description = document.createElement('p');
             food_description.textContent = lunch_combo_data[0].items[i].description;
         
             food_top.appendChild(food_name);
-            food_top.appendChild(price);
+            // food_top.appendChild(price);
             food_item.appendChild(food_top);
             food_item.appendChild(food_description);
             menu_card.appendChild(food_item);
@@ -91,7 +91,7 @@ function display(){
 
     
         const card_category = document.createElement('h1');
-        card_category.textContent = lunch_combo_data[1].name;
+        card_category.textContent = lunch_combo_data[1].name + "  $" + lunch_combo_data[1].items[0].price;
         menu_card.appendChild(card_category);
     
 
@@ -104,14 +104,14 @@ function display(){
             const food_name = document.createElement('h3');
             food_name.textContent = lunch_combo_data[1].items[i].name;
         
-            const price = document.createElement('div');
-            price.textContent = lunch_combo_data[1].items[i].price;
+            // const price = document.createElement('div');
+            // price.textContent = lunch_combo_data[1].items[i].price;
         
             const food_description = document.createElement('p');
             food_description.textContent = lunch_combo_data[1].items[i].description;
         
             food_top.appendChild(food_name);
-            food_top.appendChild(price);
+            // food_top.appendChild(price);
             food_item.appendChild(food_top);
             food_item.appendChild(food_description);
             menu_card.appendChild(food_item);
