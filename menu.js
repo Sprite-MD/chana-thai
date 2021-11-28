@@ -14,21 +14,26 @@ const lunch_combo_data = [];
 const drink_dessert_data = [];
 const sides_data = [];
 
+const menu = document.querySelector('.menu_box');
 const menu_files = []
+
 
 let menu_index = 1;
 show_menu(menu_index);
-to_menu(1);
+
 function to_menu(n){
     show_menu(menu_index = n);
 }
+
 
 function show_menu(n){
     const menu_btns = document.getElementsByClassName('categories');
     let menu_count = 0;
 
+
     switch(n){
         case 1:
+
             menu_files.length = 0
             menu_files.push("./menu_data/appetizers.json");
 
@@ -153,6 +158,7 @@ function show_menu(n){
             });
 
         case 8:
+            
             menu_files.length = 0
             menu_files.push("./menu_data/side.json");
 
@@ -180,7 +186,6 @@ function show_menu(n){
 function display_appetizers(){
 
     const app_btn = document.querySelector('.appetizers');
-    const menu = document.querySelector('#menu');
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
@@ -268,7 +273,7 @@ function display_appetizers(){
 
 function display_ss(){
     const soup_salad_btn = document.querySelector('.soup_salad');
-    const menu = document.querySelector('#menu');
+    
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
@@ -358,7 +363,7 @@ function display_ss(){
 function display_entree(){
     
     const entree_btn = document.querySelector('.entrees');
-    const menu = document.querySelector('#menu');
+    
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
@@ -486,7 +491,7 @@ function display_entree(){
 function display_alacarte(){
 
     const app_btn = document.querySelector('.alacarte');
-    const menu = document.querySelector('#menu');
+    
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
@@ -571,7 +576,7 @@ function display_alacarte(){
 function display_chef(){
 
     const chef_btn = document.querySelector('.chef_special');
-    const menu = document.querySelector('#menu');
+    
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
@@ -696,7 +701,7 @@ function display_chef(){
 
 function display_specials(){
     const specials_btn = document.querySelector('.lunch_combo');
-    const menu = document.querySelector('#menu');
+    
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
@@ -784,7 +789,7 @@ function display_specials(){
 
 function display_dd(){
     const drink_dessert_btn = document.querySelector('.drink_dessert');
-    const menu = document.querySelector('#menu');
+    
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
@@ -879,7 +884,7 @@ function display_dd(){
 function display_sides(){
 
     const sides_btn = document.querySelector('.sides');
-    const menu = document.querySelector('#menu');
+    
 
     const menu_row = document.createElement('div');
     menu_row.classList.add('menu_row');
