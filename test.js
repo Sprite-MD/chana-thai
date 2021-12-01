@@ -1,16 +1,16 @@
 let menu = {};
+menu_file = './alt_data/menu.json';
 
-menu_files = ['./alt_data/appetizers.json','./alt_data/soup_salad.json','./alt_data/entree.json','./alt_data/alacarte.json', './alt_data/chefspecials.json', './alt_data/lunch_combo.json', './alt_data/drinks_desserts.json', './alt_data/side.json']
-
-
-menu_files.forEach(file => {
-  fetch(file)
-  .then(res => res.json())
-  .then(data => {
-    menu[data['name']] = data;
-  })
-  .catch(err => {throw err})
+fetch(menu_file)
+.then(res => res.json())
+.then(data_files => {
+    data_files.forEach(data => {
+      menu[data['name']] = data;
+    })
+  
 })
+.catch(err => {throw err})
+
 
 function display(category){
   data = menu[category];
@@ -27,8 +27,6 @@ menu_row.classList.add('menu_row');
 
 function display_column(items){
   const menu = document.querySelector('.menu_box');
-
-
 
   const menu_card = document.createElement('div');
   menu_card.classList.add('menu_card');
