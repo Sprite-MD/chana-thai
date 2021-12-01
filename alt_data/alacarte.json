@@ -1,0 +1,70 @@
+{
+	"name":"A La Carte",
+	"description":"Choice of meat: White chicken meat, beef, tofu, vegetable, or no meat.",
+	"additional":"Shrimp or combination(shrimp, beef, and chicken) add $2.50. White rice $2.50/Brown rice $3.00.",
+	"columns":[5,4],
+	"items":[{
+		"number":51,
+		"name":"Garlic",
+		"price":11.50,
+		"description":"Sauteed in our special garlic sauce with steamed vegetable.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":52,
+		"name":"Broccoli",
+		"price":11.50,
+		"description":"Sauteed in in oyster sauce on the bed of steamed broccoi and carrot.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":53,
+		"name":"Cashew Nut",
+		"price":12.50,
+		"description":"Delicately sauteed with onion, carrot, bell pepper, water chestnut in special brown sauce.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":54,
+		"name":"Kung Pao",
+		"price":11.50,
+		"description":"Sauteed with peanut, water chestnut, bell pepper, carrot, and onion in our special sauce.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":55,
+		"name":"Spice Basil Leaves",
+		"price":11.50,
+		"description":"Sauteed with basil leaves, bell pepper, onion, and carrot in our special sauce.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":56,
+		"name":"Mixed Vegetable",
+		"price":11.50,
+		"description":"Sauteed mixed vegetable, broccoli, onion, carrot, baby corn, celery, cabbage and bean sprouts.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":57,
+		"name":"Spicy Nam Prik Pao",
+		"price":11.50,
+		"description":"Sauteed with chili oil, onions, bell peppers, and carrot.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":58,
+		"name":"Ginger Onion",
+		"price":11.50,
+		"description":"Sauteed with sliced ginger, mushroom, onion, bell peppers, celery, and carrot in wine sauce.",
+		"image":"/img/no_image.gif"
+		},
+		{
+		"number":60,
+		"name":"Teriyaki Chicken",
+		"price":11.50,
+		"description":"Sauteed in teriyaki sauce with steamed vegetable.",
+		"image":"/img/no_image.gif"
+		}
+	]
+}

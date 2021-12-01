@@ -1,0 +1,98 @@
+{
+	"name":"Appetizers",
+	"description":"",
+	"columns":[6,7],
+	"items":[{
+		"number":1,
+		"name":"Fried Wonton",
+		"price":8.50,
+		"description":"Deep fried wonton stuffed with ground chicken served with sweet & sour sauce.",
+		"image":"./img/appetizers/A1.JPG"
+		},
+		{
+		"number":2,
+		"name":"Egg Rolls",
+		"price":8.50,
+		"description":"Deep fried roll stuffed mixed vegetable, served with sweet & sour sauce.",
+		"image":"./img/no_image.gif"
+		},
+		{
+		"number":3,
+		"name":"Fried Tofu",
+		"price":8.50,
+		"description":"Deep fried tofu served with sweet and sour sauce, topped with ground peanut.",
+		"image":"./img/no_image.gif"
+		},
+		{
+		"number":4,
+		"name":"Cheese Wonton",
+		"price":10.50,
+		"description":"Deep fried pastry filled with a blend of cheese, served with sweet & sour sauce.",
+		"image":"./img/appetizers/A4.JPG"
+		},
+		{
+		"number":5,
+		"name":"Butterfly Shrimp",
+		"price":11.50,
+		"description":"Deep fried shrimp served with sweet & sour sauce.",
+		"image":"./img/no_image.gif"
+		},
+		{
+		"number":6,
+		"name":"Vegetable Tempura",
+		"price":10.50,
+		"description":"Deep fried mixed vegetables, served with sweet & sour sauce.",
+		"image":"./img/no_image.gif"
+		},
+		{
+		"number":7,
+		"name":"Sexy Shrimp",
+		"price":11.50,
+		"description":"Fried shrimp on a stick with seasoning served with sweet & sour sauce.",
+		"image":"./img/appetizers/A7.JPG"
+		},
+		{
+		"number":8,
+		"name":"Shrimp Roll",
+		"price":11.50,
+		"description":"Shrimp rolls wrapped in wonton skin, deep-fried and served with green salad and sweet and sour sauce.",
+		"image":"./img/no_image.gif"
+		},
+		{
+		"number":9,
+		"name":"Steamed or Fried Dumplings",
+		"price":9.50,
+		"description":"Chicken dumpling, sered with green salad, sweet & sour dip or sweet black dip.",
+		"image":"./img/appetizers/A9.JPG"
+		},
+		{
+		"number":10,
+		"name":"Satay Chicken",
+		"price":10.50,
+		"description":"Sliced chicken on skewers, marinated in a mixture of Thai spices and coconut milk grilled, served with cucumber salad and peanut sauce.",
+		"image":"./img/no_image.gif"
+		},
+		{
+		"number":11,
+		"name":"Shrimp Cake",
+		"price":11.50,
+		"description":"Deep fried mixed shrimp paste served with ground shrimp and water chestnut, with sweet & sour sauce.",
+		"image":"./img/appetizers/A12.JPG"
+		},
+		{
+		"number":12,
+		"name":"Golden Wings",
+		"price":11.50,
+		"description":"Deep-fried stuffed chicken wing with ground chicken and water chestnut, served wih sweet and sour sauce, topped with ground peanut and cucumber.",
+		"image":"./img/appetizers/A13.JPG"
+		},
+		{
+		"number":13,
+		"name":"Combination Appetizer",
+		"price":11.50,
+		"description":"Two butterfly shrimps, two egg rolls, five fried wontons. Served with sweet & sour sauce.",
+		"image":"./img/appetizers/A14.JPG"
+		}
+	]
+}
+

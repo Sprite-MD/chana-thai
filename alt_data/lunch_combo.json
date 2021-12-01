@@ -1,0 +1,156 @@
+[
+    {
+        "name":"Lunch Specials",
+        "description":"Choice of Chicken, Beef, Tofu, Shrimp (add $1)",
+        "additional":"Served with White or Brown Rice, Egg Roll, and Salad.",
+        "columns": [10],
+        "items":[{
+            "number":"1",
+            "name":"Garlic",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"2",
+            "name":"Teriyaki",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"3",
+            "name":"Broccoli",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"4",
+            "name":"Pad Thai",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"5",
+            "name":"Spicy Basil",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"6",
+            "name":"Kung Pao",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"7",
+            "name":"Mixed Vegetable",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"8",
+            "name":"Red Curry",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"9",
+            "name":"Yellow Curry",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"10",
+            "name":"Panang Curry",
+            "price":10.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            }
+        ]
+    },
+
+    {
+        "name":"Combo Specials",
+        "description":"",
+        "columns": [10],
+        "items":[{
+            "number":"C1",
+            "name":"Spicy Basil Chicken with Rice and Fried Egg",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C2",
+            "name":"Orange Chicken with Fried Rice and 1 Egg Roll",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C3",
+            "name":"Sriracha Chicken with Fried Rice and 1 Egg Roll",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C4",
+            "name":"Musmun Beef with Rice and 2 Chicken Satay",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C5",
+            "name":"Garlic Chicken with Rice and Fried Egg",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C6",
+            "name":"Cashew Nut Chicken with Rice and 1 Egg Roll",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C7",
+            "name":"Chicken Larb with Rice and Green Salad",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C8",
+            "name":"Grilled Pork with Fried Rice and Green Salad",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C9",
+            "name":"Fried Chicken with Fried Rice and Green Salad",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            },
+            {
+            "number":"C10",
+            "name":"BBQ Chicken with Fried Rice and Green Salad",
+            "price":12.00,
+            "description":"",
+            "image":"/img/no_image.gif"
+            }
+        ]
+    }
+]

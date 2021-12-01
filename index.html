@@ -4,6 +4,7 @@
         <title> Chana Thai </title> 
         <meta charset='UTF-8'>
         <link rel='stylesheet' href="styles.css"/>
+        <link rel='shortcut icon' type='image' href='images/favicon.ico'/>
     </head>
 
     <body>
@@ -54,14 +55,14 @@
 
         <div id='menu'>
             <div class='buttons'>
-                <button class='categories appetizers' onclick='to_menu(1)'> Appetizers </button>
+                <button class='categories appetizers' onclick='display("Appetizers")'> Appetizers </button>
                 <button class='categories soup_salad' onclick ='to_menu(2)'> Soups & Salads </button>
                 <button class='categories entrees' onclick='to_menu(3)'> Entrees </button>
                 <button class='categories alacarte' onclick='to_menu(4)'> A la Carte </button>
-                <button class='categories chef_special' onclick='to_menu(5)'> Chef Specials </button>
+                <button class='categories chef_special' onclick='display("Chefs Specials")'> Chef Specials </button>
                 <button class='categories lunch_combo' onclick='to_menu(6)'> Lunch & Combo Specials </button>
                 <button class='categories drink_dessert' onclick='to_menu(7)'> Drinks & Desserts </button>
-                <button class='categories sides' onclick='to_menu(8)'> Sides </button>
+                <button class='categories sides' onclick='display("Side Order")'> Sides </button>
             </div>
             <div class='menu_box'></div>
 
@@ -206,7 +207,8 @@
         </div>
 
 
-        <script src='menu.js'></script>
+        <!-- <script src='menu.js'></script> -->
+        <script src='test.js'></script>
         <script src="lightbox.js"></script>    
 
         
