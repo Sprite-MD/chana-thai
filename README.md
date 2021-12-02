@@ -12,11 +12,10 @@ Gallery of pictures that open into a lightbox when clicked
 
 
 To-do:  
-have appetizer menu open on load   
-fix double click issue with menu button  
+Fix pricing for certain categories with more than one price  
+Add additional descriptions to certain categories  
 add side arrows to menu section so that users have alternate methods of menu traversal  
 style the menu buttons to be more appealing  
-close gap between contact columns for better aesthetics  
 add another row in about section so it isn't too small(?)  
 adjust modal spacings and the arrows  
 switch out pictures for actual restarant pics  
