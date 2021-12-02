@@ -2,7 +2,7 @@
     {
         "name":"Appetizers",
         "description":"",
-        "columns":[6,7],
+        "columns":[7,6],
         "items":[{
             "number":1,
             "name":"Fried Wonton",

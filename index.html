@@ -55,14 +55,14 @@
 
         <div id='menu'>
             <div class='buttons'>
-                <button class='categories appetizers' onclick='display("Appetizers")'> Appetizers </button>
-                <button class='categories soup_salad' onclick ='display("Salad");display("Soup") '> Soups & Salads </button>
-                <button class='categories entrees' onclick='display("Noodles"); display("Fried Rice"); display("Curry")'> Entrees </button>
-                <button class='categories alacarte' onclick='display("A La Carte")'> A la Carte </button>
-                <button class='categories chef_special' onclick='display("Chefs Specials")'> Chef Specials </button>
-                <button class='categories lunch_combo' onclick='display("Lunch Specials"); display("Combo Specials")'> Lunch & Combo Specials </button>
-                <button class='categories drink_dessert' onclick='display("Beverages"); display("Dessert")'> Drinks & Desserts </button>
-                <button class='categories sides' onclick='display("Side Order")'> Sides </button>
+                <button class='categories appetizers' onclick='display(["Appetizers"])'> Appetizers </button>
+                <button class='categories soup_salad' onclick ='display(["Salad", "Soup"]) '> Soups & Salads </button>
+                <button class='categories entrees' onclick='display(["Noodles", "Fried Rice", "Curry"])'> Entrees </button>
+                <button class='categories alacarte' onclick='display(["A La Carte"])'> A la Carte </button>
+                <button class='categories chef_special' onclick='display(["Chefs Specials"])'> Chef Specials </button>
+                <button class='categories lunch_combo' onclick='display(["Lunch Specials", "Combo Specials"])'> Lunch & Combo Specials </button>
+                <button class='categories drink_dessert' onclick='display(["Beverages", "Dessert"])'> Drinks & Desserts </button>
+                <button class='categories sides' onclick='display(["Side Order"])'> Sides </button>
             </div>
             <div class='menu_box'></div>
 
@@ -207,8 +207,7 @@
         </div>
 
 
-        <!-- <script src='menu.js'></script> -->
-        <script src='test.js'></script>
+        <script src='menu.js'></script>
         <script src="lightbox.js"></script>    
 
         
