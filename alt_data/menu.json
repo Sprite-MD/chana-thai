@@ -782,7 +782,8 @@
         "items":[{
             "number":"",
             "name":"Thai Ice Tea",
-            "price":3.25,
+            "price":"",
+            "small": 3.25,
             "large":5.75,
             "description":"",
             "image":"/img/no_image.gif"
@@ -790,7 +791,8 @@
             {
             "number":"",
             "name":"Thai Ice Coffee",
-            "price":3.25,
+            "price":"",
+            "small": 3.25,
             "large":5.75,
             "description":"",
             "image":"/img/no_image.gif"
@@ -798,7 +800,8 @@
             {
             "number":"",
             "name":"Lemonade",
-            "price":3.25,
+            "price":"",
+            "small": 3.25,
             "large":5.75,
             "description":"",
             "image":"/img/no_image.gif"
@@ -806,7 +809,8 @@
             {
             "number":"",
             "name":"Regular Ice Tea",
-            "price":2.75,
+            "price":"",
+            "small": 2.75,
             "large":4.75,
             "description":"",
             "image":"/img/no_image.gif"
@@ -814,7 +818,8 @@
             {
             "number":"",
             "name":"Shirley Temple",
-            "price":3.75,
+            "price":"",
+            "small":3.75,
             "large":5.75,
             "description":"",
             "image":"/img/no_image.gif"
