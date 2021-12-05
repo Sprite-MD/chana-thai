@@ -17,6 +17,7 @@ Add additional descriptions to certain categories
 add side arrows to menu section so that users have alternate methods of menu traversal  
 style the menu buttons to be more appealing  
 add another row in about section so it isn't too small(?)  
-adjust modal spacings and the arrows  
+adjust modal arrows  
+add div behind modal to allow click out 
 switch out pictures for actual restarant pics  
 
