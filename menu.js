@@ -81,4 +81,4 @@ function clear(){
 
 setTimeout(() => {
   display(["Appetizers"]);
-}, 500);
+}, 300);
