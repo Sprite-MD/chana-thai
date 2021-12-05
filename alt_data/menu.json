@@ -471,7 +471,7 @@
     {
         "name":"Chefs Specials",
         "description":"",
-        "columns":[6,5,5],
+        "columns":[5,6,5],
         "items":[{
             "number":60,
             "name":"BBQ Chicken",
