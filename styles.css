@@ -139,13 +139,14 @@ a{
   margin: 0 5rem;
   padding-bottom: 2rem;
 }
-.food_item_top{
+.food_top{
   display: flex;
   justify-content: space-between;
   margin-right: 2rem;
   margin-left: 1rem;
+  text-align: left;
 }
-.food_item_top div{
+.food_top div{
   align-self: center;
 }
 .food_item p{
