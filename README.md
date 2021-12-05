@@ -20,4 +20,6 @@ add another row in about section so it isn't too small(?)
 adjust modal arrows  
 add div behind modal to allow click out 
 switch out pictures for actual restarant pics  
+adjust size changes for different aspect ratios including laptops and mobile  
+
 
