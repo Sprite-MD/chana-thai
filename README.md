@@ -12,8 +12,8 @@ Gallery of pictures that open into a lightbox when clicked
 
 
 To-do:  
-Fix pricing for certain categories with more than one price  
-Add additional descriptions to certain categories  
+Fix pricing for certain categories with more than one price  (--Beverages--, Soup)
+Add additional descriptions to certain categories  (Entree, Lunch, )
 add side arrows to menu section so that users have alternate methods of menu traversal  
 style the menu buttons to be more appealing  
 add another row in about section so it isn't too small(?)  

@@ -95,71 +95,71 @@ a{
     opacity: .5;
 }
 #about h2{
-    font-size: 3.375em;
-    margin-block-start: .83em;
-    margin-block-end: .83em;
+	font-size: 3.375em;
+	margin-block-start: .83em;
+	margin-block-end: .83em;
 }
 
 
 #menu{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
 }
 .buttons{
-  align-content: center;
-  justify-content: center;
-  align-self: center;
-  margin-top: 6rem;
+	align-content: center;
+	justify-content: center;
+	align-self: center;
+	margin-top: 6rem;
 }
 .categories{
-  align-content: center;
-  justify-content: center;
-  padding: 8px;
-  margin: 10px;
-  margin-top: 2em;
-  margin-bottom: 2em;
+	align-content: center;
+	justify-content: center;
+	padding: 8px;
+	margin: 10px;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 .menu_row{
-  display: flex;
-  justify-content: center;
-  margin:5rem;
+	display: flex;
+	justify-content: center;
+	margin:5rem;
 }
 .menu_card{
-  display: flex;
-  flex-direction: column;
-  border:1px solid white;
-  justify-content: center;
-  align-content: center;
-  width: 500px;
-  text-align: center;
-  align-self: flex-start;
-  margin-bottom: 3rem;
-  margin: 0 5rem;
-  padding-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	border:1px solid white;
+	justify-content: center;
+	align-content: center;
+	width: 500px;
+	text-align: center;
+	align-self: flex-start;
+	margin-bottom: 3rem;
+	margin: 0 5rem;
+	padding-bottom: 2rem;
 }
 .food_top{
-  display: flex;
-  justify-content: space-between;
-  margin-right: 2rem;
-  margin-left: 1rem;
-  text-align: left;
+	display: flex;
+	justify-content: space-between;
+	margin-right: 2rem;
+	margin-left: 1rem;
+	text-align: left;
 }
 .food_top div{
-  align-self: center;
+  	align-self: center;
 }
 .food_item p{
-  text-align: left;
-  margin: 0 1rem;
+	text-align: left;
+	margin: 0 1rem;
 }
 
 
 
 #gallery{
-  display: flex;
-  flex-direction: column;
-  width: auto;
+	display: flex;
+	flex-direction: column;
+	width: auto;
 }
 .preview {
     width: 100%;
@@ -182,116 +182,115 @@ a{
     You will change this display property with JavaScript below. */
     
 .modal {
-  display: none;
-  position: fixed;
-  padding: 10px 62px 0px 62px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  z-index: 20; 
+	display: none;
+	position: fixed;
+	padding: 10px 62px 0px 62px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: black;
+	z-index: 20; 
 }
 
 .modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  padding: 0;
-  width: 100%;
-  max-width: 1200px;
-  height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	padding: 0;
+	width: 100%;
+	max-width: 1200px;
+	height: 100%;
 }
-/* Same with your slides, you set the display to none, because you want to choose which 
-    one is shown at a time. */
 
+/* set the display to none, to show one at a time. */
 .slide {
-  display: none;
+  	display: none;
 }
 
 .image-slide {
-  width: 100%;
+ 	width: 100%;
 }
 
 .modal-preview {
-  width: 100%;
+  	width: 100%;
 }
 
 .dots {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-/* You want the previews a little transparent to show that they are "inactive". 
-    You then add an .active or :hover class to animate the selections for your user when
+/* add an .active or :hover class to animate the selections for your user when
     they interact with your controls and clickable content.
   */
 
 img.preview, img.modal-preview {
-  opacity: 1;
+  	opacity: 1;
 }
 
 img.active,
 .preview:hover,
 .modal-preview:hover {
-  opacity: .6;
+  	opacity: .6;
 }
 
 img.hover-shadow {
-  transition: 0.3s;
+  	transition: 0.3s;
 }
 
 .hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 } 
 
 .close {
-  color: rgb(204, 179, 179);
-  position: absolute;
-  top: 10px;
-  right: 150px;
-  font-size: 35px;
-  font-weight: bold;
-  z-index: 110;
+	color: rgb(204, 179, 179);
+	position: absolute;
+	top: 10px;
+	right: 150px;
+	font-size: 35px;
+	font-weight: bold;
+	z-index: 110;
 }
 
 .close:hover,
 .close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .previous,
 .next {
-  align-self: stretch;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  width: auto;
-  padding: 387px 30px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+	align-self: stretch;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	width: auto;
+	height: 80%;
+	padding: 387px 30px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+	right: 0;
+	border-radius: 3px 0 0 3px;
 }
 
 .previous:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  	background-color: rgba(0, 0, 0, 0.8);
 }
 
 
