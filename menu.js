@@ -51,7 +51,11 @@ function display_column(menu_row, items, name){
     food_name.textContent = items[i].name;
 
     const price = document.createElement('div');
-    price.textContent = items[i].price;
+    // covers beverage for having two sizes
+    if (items[i].price == ""){
+        price.textContent = items[i].small + " | " + items[i].large;
+    }
+    else {price.textContent = items[i].price;}
 
     const food_description = document.createElement('p');
     food_description.textContent = items[i].description;
@@ -71,7 +75,6 @@ function display_column(menu_row, items, name){
 }
 
 function clear(){
-  const menu = document.querySelector("#menu");
   const menu_box = document.querySelector(".menu_box");
 
   while (menu_box.firstChild){
@@ -79,6 +82,7 @@ function clear(){
   }
 }
 
+// Need timer so display has time to process before being loaded
 setTimeout(() => {
   display(["Appetizers"]);
 }, 300);
