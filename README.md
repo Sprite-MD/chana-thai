@@ -12,14 +12,10 @@ Gallery of pictures that open into a lightbox when clicked
 
 
 To-do:  
-Fix pricing for certain categories with more than one price  (--Beverages--, Soup)
-Add additional descriptions to certain categories  (Entree, Lunch, )
-add side arrows to menu section so that users have alternate methods of menu traversal  
-style the menu buttons to be more appealing  
-add another row in about section so it isn't too small(?)  
-adjust modal arrows  
-add div behind modal to allow click out 
-switch out pictures for actual restarant pics  
-adjust size changes for different aspect ratios including laptops and mobile  
+Style menu items, category descriptions, modal arrows, & menu buttons  
+Add another row in about section so it isn't too small(?)  
+Create modal click out when clicking outside of slide 
+Switch out pictures for actual restarant pics  
+Adjust size changes for different aspect ratios including laptops and mobile  
 
 

@@ -51,4 +51,10 @@ function showSlide(n) {
   modalPreviews[slideIndex - 1].className += ' active';
 };
 
+let modal = document.querySelector('.modal-content');
+window.onclick = (event) => {
+	if (event.target == modal){
+		modal.style.display = 'none';
 
+	}
+}

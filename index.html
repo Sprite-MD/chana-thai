@@ -55,19 +55,22 @@
 
         <div id='menu'>
             <div class='buttons'>
-                <button class='categories appetizers' onclick='display(["Appetizers"])'> Appetizers </button>
-                <button class='categories soup_salad' onclick ='display(["Salad", "Soup"]) '> Soups & Salads </button>
-                <button class='categories entrees' onclick='display(["Noodles", "Fried Rice", "Curry"])'> Entrees </button>
-                <button class='categories alacarte' onclick='display(["A La Carte"])'> A la Carte </button>
-                <button class='categories chef_special' onclick='display(["Chefs Specials"])'> Chef Specials </button>
-                <button class='categories lunch_combo' onclick='display(["Lunch Specials", "Combo Specials"])'> Lunch & Combo Specials </button>
-                <button class='categories drink_dessert' onclick='display(["Beverages", "Dessert"])'> Drinks & Desserts </button>
-                <button class='categories sides' onclick='display(["Side Order"])'> Sides </button>
+                <button class='categories appetizers' onclick='display(0)'> Appetizers </button>
+                <button class='categories soup_salad' onclick ='display(1) '> Soups & Salads </button>
+                <button class='categories entrees' onclick='display(2)'> Entrees </button>
+                <button class='categories alacarte' onclick='display(3)'> A la Carte </button>
+                <button class='categories chef_special' onclick='display(4)'> Chef Specials </button>
+                <button class='categories lunch_combo' onclick='display(5)'> Lunch & Combo Specials </button>
+                <button class='categories drink_dessert' onclick='display(6)'> Drinks & Desserts </button>
+                <button class='categories sides' onclick='display(7)'> Sides </button>
             </div>
-            <div class='menu_box'></div>
+            <div class='menu_box'>
+                <div class='additionals'></div>
+                <div class='menu_list'></div>
+            </div>
 
-            <!-- <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a> -->
+            <a class="previous" onclick='change_menu(-1)'>&#10094;</a>
+            <a class="next" onclick='change_menu(1)'>&#10095;</a>
 
             
         </div>
@@ -138,70 +141,72 @@
         <!--Lightbox code, contained in modal all the images, controls, and another set of preview images
 			as the dots are in here. Dots show users which image is currently active-->
         <div id="Lightbox" class="modal">
-            <span class="close pointer" onclick="closeLightbox()">&times;</span>
-            <div class="modal-content">
-              <div class="slide">
-                  <img src="images/lightbox/duck.jpg" class="image-slide" alt="Toy car on the road." />
-              </div>
-              <div class="slide">
-                  <img src="images/lightbox/greenCurry.jpg" class="image-slide" alt="Toy car exploring offroad." />
-              </div>    
-              <div class="slide">
-                  <img src="images/lightbox/mincePork.jpg" class="image-slide" alt="Toy car in the city." />
-              </div>
-            
+            <div class="click_out">
+                <span class="close pointer" onclick="closeLightbox()">&times;</span>
+                <div class="modal-content">
                 <div class="slide">
-                    <img src="images/lightbox/boatNoodle.jpg" class="image-slide" alt="Toy car in the city." />
+                    <img src="images/lightbox/duck.jpg" class="image-slide" alt="Toy car on the road." />
                 </div>
                 <div class="slide">
-                    <img src="images/lightbox/chickenSatay.jpg" class="image-slide" alt="Toy car in the city." />
-                </div>
+                    <img src="images/lightbox/greenCurry.jpg" class="image-slide" alt="Toy car exploring offroad." />
+                </div>    
                 <div class="slide">
-                    <img src="images/lightbox/porkStick.jpg" class="image-slide" alt="Toy car in the city." />
+                    <img src="images/lightbox/mincePork.jpg" class="image-slide" alt="Toy car in the city." />
                 </div>
-
-                <div class="slide">
-                    <img src="images/lightbox/padThai.jpg" class="image-slide" alt="Toy car in the city." />
-                </div>
-                <div class="slide">
-                    <img src="images/lightbox/tofu.jpg" class="image-slide" alt="Toy car in the city." />
-                </div>
-                <div class="slide">
-                    <img src="images/lightbox/redPork.jpg" class="image-slide" alt="Toy car in the city." />
-                </div>
-            
-                <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeSlide(1)">&#10095;</a>
-            
-                <div class="dots">
-                    <div class="gallery_col">
-                        <img src="images/lightbox/duck.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road" />
+                
+                    <div class="slide">
+                        <img src="images/lightbox/boatNoodle.jpg" class="image-slide" alt="Toy car in the city." />
                     </div>
-                    <div class="gallery_col">
-                        <img src="images/lightbox/greenCurry.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." />
+                    <div class="slide">
+                        <img src="images/lightbox/chickenSatay.jpg" class="image-slide" alt="Toy car in the city." />
                     </div>
-                    <div class="gallery_col">
-                        <img src="images/lightbox/mincePork.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city." />
+                    <div class="slide">
+                        <img src="images/lightbox/porkStick.jpg" class="image-slide" alt="Toy car in the city." />
                     </div>
 
-                    <div class="gallery_col">
-                        <img src="images/lightbox/boatNoodle.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="Toy car on the road" />
+                    <div class="slide">
+                        <img src="images/lightbox/padThai.jpg" class="image-slide" alt="Toy car in the city." />
                     </div>
-                    <div class="gallery_col">
-                        <img src="images/lightbox/chickenSatay.jpg" class="modal-preview hover-shadow" onclick="toSlide(5)" alt="Toy car on the road" />
+                    <div class="slide">
+                        <img src="images/lightbox/tofu.jpg" class="image-slide" alt="Toy car in the city." />
                     </div>
-                    <div class="gallery_col">
-                        <img src="images/lightbox/porkStick.jpg" class="modal-preview hover-shadow" onclick="toSlide(6)" alt="Toy car on the road" />
+                    <div class="slide">
+                        <img src="images/lightbox/redPork.jpg" class="image-slide" alt="Toy car in the city." />
                     </div>
-                    
-                    <div class="gallery_col">
-                        <img src="images/lightbox/padThai.jpg" class="modal-preview hover-shadow" onclick="toSlide(7)" alt="Toy car on the road" />
-                    </div>
-                    <div class="gallery_col">
-                        <img src="images/lightbox/tofu.jpg" class="modal-preview hover-shadow" onclick="toSlide(8)" alt="Toy car on the road" />
-                    </div>
-                    <div class="gallery_col">
-                        <img src="images/lightbox/redPork.jpg" class="modal-preview hover-shadow" onclick="toSlide(9)" alt="Toy car on the road" />
+                
+                    <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                
+                    <div class="dots">
+                        <div class="gallery_col">
+                            <img src="images/lightbox/duck.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road" />
+                        </div>
+                        <div class="gallery_col">
+                            <img src="images/lightbox/greenCurry.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." />
+                        </div>
+                        <div class="gallery_col">
+                            <img src="images/lightbox/mincePork.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city." />
+                        </div>
+
+                        <div class="gallery_col">
+                            <img src="images/lightbox/boatNoodle.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="Toy car on the road" />
+                        </div>
+                        <div class="gallery_col">
+                            <img src="images/lightbox/chickenSatay.jpg" class="modal-preview hover-shadow" onclick="toSlide(5)" alt="Toy car on the road" />
+                        </div>
+                        <div class="gallery_col">
+                            <img src="images/lightbox/porkStick.jpg" class="modal-preview hover-shadow" onclick="toSlide(6)" alt="Toy car on the road" />
+                        </div>
+                        
+                        <div class="gallery_col">
+                            <img src="images/lightbox/padThai.jpg" class="modal-preview hover-shadow" onclick="toSlide(7)" alt="Toy car on the road" />
+                        </div>
+                        <div class="gallery_col">
+                            <img src="images/lightbox/tofu.jpg" class="modal-preview hover-shadow" onclick="toSlide(8)" alt="Toy car on the road" />
+                        </div>
+                        <div class="gallery_col">
+                            <img src="images/lightbox/redPork.jpg" class="modal-preview hover-shadow" onclick="toSlide(9)" alt="Toy car on the road" />
+                        </div>
                     </div>
                 </div>
             </div>

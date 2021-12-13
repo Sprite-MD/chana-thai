@@ -1,5 +1,6 @@
 let menu = {};
 menu_file = './alt_data/menu.json';
+const menu_categories = [["Appetizers"], ["Salad", "Soup"],["Noodles", "Fried Rice", "Curry"], ["A La Carte"], ["Chefs Specials"], ["Lunch Specials", "Combo Specials"], ["Beverages", "Dessert"], ["Side Order"]];
 
 fetch(menu_file)
 .then(res => res.json())
@@ -7,40 +8,61 @@ fetch(menu_file)
     data_files.forEach(data => {
       menu[data['name']] = data;
     })
-  
+    display(0);
 })
 .catch(err => {throw err})
 
-
-function display(categories){
+let current_category = 0
+function display(index){
   clear();
 
   let menu_row = document.createElement('div');
 
+  const menu_box = document.querySelector('.menu_box');
+  const menu_lists = document.querySelector('.menu_list');
+
   menu_row.classList.add('menu_row');
 
-  categories.forEach(category => {
+  menu_categories[index].forEach(category => {
     menu_items = 0
     data = menu[category];
+    
     data['columns'].forEach(column => {
-      display_column(menu_row, data['items'].slice(menu_items, menu_items += column), data['name']);
+      display_column(menu_row, data['items'].slice(menu_items, menu_items += column), data);
     })
+
+    // Meat choices and add-ons at top of menu
+    
+    const menu_description = document.querySelector('.additionals');
+    const meat_choice = document.createElement('p');
+    meat_choice.textContent = data['description'];
+    const additionals = document.createElement('p');
+    additionals.textContent = data['additional'];
+
+    menu_description.appendChild(meat_choice);
+    menu_description.appendChild(additionals)
+
+    menu_box.insertBefore(menu_description, menu_lists)
+  
+    
   })
   
+  current_category = index;
 }
 
 
 
-function display_column(menu_row, items, name){
-  const menu = document.querySelector('.menu_box');
+function display_column(menu_row, items, data){
+  const menu_lists = document.querySelector('.menu_list');
 
   const menu_card = document.createElement('div');
   menu_card.classList.add('menu_card');
 
   const card_category = document.createElement('h1');
-  card_category.textContent = name;
+  card_category.textContent = data['name'];
   menu_card.appendChild(card_category);
 
+  // loops through food items to put them into the cards
   for (let i = 0; i < items.length; i++) {
     const food_item = document.createElement('div');
     food_item.classList.add('food_item');
@@ -50,9 +72,18 @@ function display_column(menu_row, items, name){
     const food_name = document.createElement('h3');
     food_name.textContent = items[i].name;
 
+   
+    const soup_prices = document.createElement('div');
     const price = document.createElement('div');
-    // covers beverage for having two sizes
-    if (items[i].price == ""){
+    // Soup meat prices
+    if (data['name'] == 'Soup'){
+      items[i].additional.forEach( item => {
+        price.innerHTML += item + "</br>";
+        soup_prices.appendChild(price);
+      })
+    }
+    // Beverage prices
+    else if (items[i].price == ""){
         price.textContent = items[i].small + " | " + items[i].large;
     }
     else {price.textContent = items[i].price;}
@@ -62,6 +93,7 @@ function display_column(menu_row, items, name){
 
     food_top.appendChild(food_name);
     food_top.appendChild(price);
+    food_top.appendChild(soup_prices)
 
     food_item.appendChild(food_top);
     food_item.appendChild(food_description);
@@ -71,18 +103,25 @@ function display_column(menu_row, items, name){
 
   }
 
-  menu.appendChild(menu_row);
+  menu_lists.appendChild(menu_row);
 }
 
 function clear(){
-  const menu_box = document.querySelector(".menu_box");
+  const menu_box = document.querySelector(".menu_list");
+  const menu_description = document.querySelector(".additionals")
 
   while (menu_box.firstChild){
     menu_box.removeChild(menu_box.lastChild);
   }
+
+  while (menu_description.firstChild){
+    menu_description.removeChild(menu_description.lastChild);
+  }  
 }
 
-// Need timer so display has time to process before being loaded
-setTimeout(() => {
-  display(["Appetizers"]);
-}, 300);
+
+function change_menu(direction){
+  current_category += direction;
+  current_category = (current_category + menu_categories.length) % menu_categories.length;
+  display(current_category);
+}

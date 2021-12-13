@@ -106,6 +106,7 @@ a{
 	flex-direction: column;
 	align-content: center;
 	justify-content: center;
+	position: relative;
 }
 .buttons{
 	align-content: center;
@@ -153,7 +154,32 @@ a{
 	text-align: left;
 	margin: 0 1rem;
 }
-
+.previous,
+.next {
+	display:inline-flex;
+	cursor: pointer;
+	position: absolute;
+	width: auto;
+	height: 100%;
+	padding: 0 30px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+	text-align: center;
+	align-items: center;
+}
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.previous:hover,
+.next:hover {
+  	background-color: rgba(0, 0, 0, 0.8);
+}
 
 
 #gallery{
@@ -204,6 +230,7 @@ a{
 	width: 100%;
 	max-width: 1200px;
 	height: 100%;
+	z-index:500;
 }
 
 /* set the display to none, to show one at a time. */
@@ -264,7 +291,7 @@ img.hover-shadow {
 	cursor: pointer;
 }
 
-.previous,
+/* .previous,
 .next {
 	align-self: stretch;
 	cursor: pointer;
@@ -291,7 +318,7 @@ img.hover-shadow {
 .previous:hover,
 .next:hover {
   	background-color: rgba(0, 0, 0, 0.8);
-}
+} */
 
 
 
