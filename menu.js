@@ -74,26 +74,33 @@ function display_column(menu_row, items, data){
 
    
     const soup_prices = document.createElement('div');
-    const price = document.createElement('div');
+    const prices = document.createElement('div');
+    prices.classList.add('food_prices');
+    const food_price = document.createElement('p');
+
     // Soup meat prices
     if (data['name'] == 'Soup'){
       items[i].additional.forEach( item => {
-        price.innerHTML += item + "</br>";
-        soup_prices.appendChild(price);
+        food_price.innerHTML += item + "</br>";
+        soup_prices.appendChild(food_price);
+        prices.appendChild(soup_prices);
       })
     }
     // Beverage prices
     else if (items[i].price == ""){
-        price.textContent = items[i].small + " | " + items[i].large;
+        food_price.textContent = items[i].small + " | " + items[i].large;
+        prices.appendChild(food_price);
     }
-    else {price.textContent = items[i].price;}
+    else {
+      food_price.textContent = items[i].price;
+      prices.appendChild(food_price);
+    }
 
     const food_description = document.createElement('p');
     food_description.textContent = items[i].description;
 
     food_top.appendChild(food_name);
-    food_top.appendChild(price);
-    food_top.appendChild(soup_prices)
+    food_top.appendChild(prices);
 
     food_item.appendChild(food_top);
     food_item.appendChild(food_description);

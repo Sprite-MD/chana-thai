@@ -142,17 +142,19 @@ a{
 }
 .food_top{
 	display: flex;
-	justify-content: space-between;
-	margin-right: 2rem;
+	margin-right: 1rem;
 	margin-left: 1rem;
-	text-align: left;
+	justify-content: space-between;
 }
-.food_top div{
+.food_top h3{
+	text-align: left;
+	justify-content: flex-start;
+}
+.food_prices{
   	align-self: center;
 }
-.food_item p{
-	text-align: left;
-	margin: 0 1rem;
+.food_prices p{
+	text-align: right;
 }
 .previous,
 .next {
