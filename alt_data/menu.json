@@ -104,7 +104,7 @@
 			"number":23,
 			"name":"Tom Yum",
 			"price":"",
-			"additional":["Chicken: 8.50 | 11.50", "Shrimp: 9.50 | 13.50", "Seafood - | 17.50","Fish: - | 18.50"],
+			"additional":["Chicken: 8.50 | 11.50", "Shrimp: 9.50 | 13.50", "Seafood: - | 17.50","Fish: - | 18.50"],
 			"description":"Famous spicy and sour soup with lemongrass, galanga, mushroom, and cilantro.",
 			"image":"/img/no_image.gif"
 			},
