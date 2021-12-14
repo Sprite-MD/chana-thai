@@ -143,6 +143,12 @@ a{
 	margin: 0 5rem;
 	padding-bottom: 2rem;
 }
+.menu_card h1{
+	margin-bottom: 1rem;
+}
+.menu_card h3{
+	margin-top: 0;
+}
 .food_top{
 	display: flex;
 	margin-right: 1rem;
@@ -295,37 +301,6 @@ img.hover-shadow {
 	text-decoration: none;
 	cursor: pointer;
 }
-
-/* .previous,
-.next {
-	align-self: stretch;
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	width: auto;
-	height: 80%;
-	padding: 387px 30px;
-	margin-top: -50px;
-	color: white;
-	font-weight: bold;
-	font-size: 20px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-	-webkit-user-select: none;
-}
-
-.next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-.previous:hover,
-.next:hover {
-  	background-color: rgba(0, 0, 0, 0.8);
-} */
-
-
 
 #contact{
     display:flex;
