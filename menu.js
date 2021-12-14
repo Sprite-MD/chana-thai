@@ -61,6 +61,13 @@ function display_column(menu_row, items, data){
   const card_category = document.createElement('h1');
   card_category.textContent = data['name'];
   menu_card.appendChild(card_category);
+  
+  // Adds lunch special hours
+  if (data['name'] == 'Lunch Specials'){
+    const time = document.createElement('h3');
+    time.textContent = data['time'];
+    menu_card.appendChild(time);
+  }
 
   // loops through food items to put them into the cards
   for (let i = 0; i < items.length; i++) {
@@ -125,7 +132,6 @@ function clear(){
     menu_description.removeChild(menu_description.lastChild);
   }  
 }
-
 
 function change_menu(direction){
   current_category += direction;

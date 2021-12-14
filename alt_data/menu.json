@@ -586,9 +586,10 @@
     },
     {
         "name":"Lunch Specials",
-        "description":"Choice of Chicken, Beef, Tofu, Shrimp (add $1)",
+        "description":"For Lunch Specials: Choice of Chicken, Beef, Tofu, Shrimp (add $1)",
         "additional":"Served with White or Brown Rice, Egg Roll, and Salad.",
         "columns": [10],
+        "time": "11:00am - 4:00pm",
         "items":[{
             "number":"1",
             "name":"Garlic",

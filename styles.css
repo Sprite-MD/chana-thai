@@ -122,6 +122,9 @@ a{
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
+.additionals{
+	text-align: center;
+}
 .menu_row{
 	display: flex;
 	justify-content: center;
