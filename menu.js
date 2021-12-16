@@ -77,7 +77,12 @@ function display_column(menu_row, items, data){
     const food_top = document.createElement('div');
     food_top.classList.add('food_top');
     const food_name = document.createElement('h3');
-    food_name.textContent = items[i].name;
+    // if the item has a number, show it
+    if (items[i].number){
+      food_name.textContent = items[i].number + ". " + items[i].name;
+    } else {
+      food_name.textContent = items[i].name;
+    }
 
    
     const soup_prices = document.createElement('div');
@@ -95,11 +100,11 @@ function display_column(menu_row, items, data){
     }
     // Beverage prices
     else if (items[i].price == ""){
-        food_price.textContent = items[i].small + " | " + items[i].large;
+        food_price.textContent = '$' + items[i].small + " | " + '$' +  items[i].large;
         prices.appendChild(food_price);
     }
     else {
-      food_price.textContent = items[i].price;
+      food_price.textContent = '$' + items[i].price.toFixed(2);
       prices.appendChild(food_price);
     }
 
