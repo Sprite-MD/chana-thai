@@ -1,7 +1,7 @@
 # chana-thai
 
 Freelance web developing for a thai restaurant. Programmed with HTML, CSS, and JavaScript to build experience. Implemented a single-page application as a design choice, using fetching API to work with external JSON files.  
-No frameworks were used to build a better understanding of web development. May revisit and update project with React and bootstrap/tailwind frameworks.  
+In order to develop a better understanding . May revisit and update project with React and bootstrap/tailwind.  
 
 
 Features:  
