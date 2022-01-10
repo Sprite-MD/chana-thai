@@ -8,7 +8,7 @@ Features:
 A fixed navbar at the top of the page that follows the user when they scroll down the page.  
 Hero page  
 A menu with selectable categories at the top that expands into several menu cards  
-Gallery of pictures that open into a lightbox when clicked  
+Interactive gallery of pictures that open into a lightbox when clicked  
 
 
 To-do:  
