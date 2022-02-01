@@ -40,7 +40,7 @@ function display(index){
     additionals.textContent = data['additional'];
 
     menu_description.appendChild(meat_choice);
-    menu_description.appendChild(additionals)
+    menu_description.appendChild(additionals);
 
     menu_box.insertBefore(menu_description, menu_lists)
   
