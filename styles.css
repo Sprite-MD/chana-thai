@@ -130,6 +130,11 @@ a{
 	justify-content: center;
 	margin:5rem;
 }
+/* @media (max-width: 600px){
+body{
+	background-color: green;
+
+}} */
 .menu_card{
 	display: flex;
 	flex-direction: column;
