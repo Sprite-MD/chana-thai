@@ -12,10 +12,11 @@ Interactive gallery of pictures that open into a lightbox when clicked
 
 
 To-do:  
+Refactor CSS to better implement flexbox and dynamic size changes  
+Adjust layout for different aspect ratios including laptops and mobile  
 Style menu items, category descriptions, modal arrows, & menu buttons  
-Add more content to About section(?)  
 Create modal click out when clicking outside of slide  
 Switch out pictures for actual restarant pics  
-Adjust layout for different aspect ratios including laptops and mobile  
+
 
 
