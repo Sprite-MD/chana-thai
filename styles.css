@@ -39,6 +39,7 @@ a{
     list-style-type: none;
 }
 
+/* Hero Page Section */
 .hero{
     display: flex;
     position: relative;
@@ -77,7 +78,7 @@ a{
     margin-top: 1rem;
 }
  
-
+/* About Section */
 #about{
     padding:5em 0;
     text-align: center;
@@ -100,7 +101,7 @@ a{
 	margin-block-end: .83em;
 }
 
-
+/* Menu Section */
 #menu{
 	display: flex;
 	flex-direction: column;
@@ -130,11 +131,11 @@ a{
 	justify-content: center;
 	margin:5rem;
 }
-/* @media (max-width: 600px){
-body{
-	background-color: green;
-
-}} */
+@media (max-width: 600px){
+	.menu_row{
+		flex-direction: column;
+	}
+}
 .menu_card{
 	display: flex;
 	flex-direction: column;
@@ -194,7 +195,7 @@ body{
   	background-color: rgba(0, 0, 0, 0.8);
 }
 
-
+/* Image Gallery Section */
 #gallery{
 	display: flex;
 	flex-direction: column;
@@ -265,10 +266,6 @@ body{
 	justify-content: space-between;
 }
 
-/* add an .active or :hover class to animate the selections for your user when
-    they interact with your controls and clickable content.
-  */
-
 img.preview, img.modal-preview {
   	opacity: 1;
 }
@@ -304,6 +301,7 @@ img.hover-shadow {
 	cursor: pointer;
 }
 
+/* Contact Section */
 #contact{
     display:flex;
     padding: 0 40px;
@@ -313,6 +311,12 @@ img.hover-shadow {
 .contact_row{
     display: flex;
     justify-content: space-between;
+}
+@media (max-width: 700px){
+	.contact_row{
+		flex-direction: column;
+		justify-content: space-between;
+	}
 }
 .contact_column{
     flex:1;
