@@ -12,5 +12,5 @@ Interactive gallery of pictures that open into a lightbox when clicked
 To-do:  
 Fix menu arrow key to not constantly move
 Redesign menu buttons
-Resize gallery and modal
+Resize gallery and modal, need click out
 Refactor for mobile consideration
