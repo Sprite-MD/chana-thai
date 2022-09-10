@@ -144,10 +144,3 @@ function change_menu(direction){
   display(current_category);
 }
 
-// suppose to be click out, need to fix css sizing first
-modal = document.querySelector('.click_out')
-window.onclick = (e) => {
-  if (e.target == modal){
-    modal.style.display = 'none'
-  }
-}
