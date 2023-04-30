@@ -1,0 +1,104 @@
+#gallery{
+	display: flex;
+	flex-direction: column;
+	width: auto;
+}
+.preview {
+    width: 100%;
+}
+.gallery_img img{
+  vertical-align: bottom;
+}
+.gallery_row {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.gallery_col{
+    width: 100%;
+    height: 100%;
+}
+
+/* Now you want to define what the lightbox will look like. Note that you have the display
+    as none. You don't want it to show until the user clicks on one of the previews. 
+    You will change this display property with JavaScript below. */
+    
+.modal {
+    display: none;
+    position: fixed;
+    padding: 10px 62px 0px 62px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    z-index: 20; 
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    z-index:500;
+}
+
+/* set the display to none, to show one at a time. */
+.slide {
+        display: none;
+}
+
+.image-slide {
+        width: 100%;
+}
+
+.modal-preview {
+        width: 100%;
+}
+
+.dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img.preview, img.modal-preview {
+        opacity: 1;
+}
+
+img.active,
+.preview:hover,
+.modal-preview:hover {
+        opacity: .6;
+}
+
+img.hover-shadow {
+        transition: 0.3s;
+}
+
+.hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+
+.close {
+    color: rgb(204, 179, 179);
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 110;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}

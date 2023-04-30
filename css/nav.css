@@ -1,0 +1,30 @@
+#navbar{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+    background-color: orange;
+    align-items: center;
+	height: 65px;
+}
+
+#navbar img{
+    height: 55px;
+}
+
+.nav_btns{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+
+}
+
+.nav_list{
+    margin: 40px;
+    list-style-type: none;
+}

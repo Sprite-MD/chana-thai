@@ -1,0 +1,18 @@
+#contact{
+    display:flex;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: center;
+}
+.contact_row{
+    display: flex;
+    justify-content: space-between;
+}
+.contact_column{
+    flex:1;
+    text-align: center;
+    margin: 0 180px;
+}
+.contact_column a{
+    text-decoration: underline;
+}

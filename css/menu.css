@@ -1,0 +1,88 @@
+#menu{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	position: relative;
+}
+.buttons{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-self: center;
+	margin-top: 6rem;
+}
+.categories{
+	align-content: center;
+	justify-content: center;
+	padding: 8px;
+	margin: 10px;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.additionals{
+	text-align: center;
+}
+.menu_row{
+	display: flex;
+	justify-content: center;
+	margin:5rem;
+}
+.menu_card{
+	display: flex;
+	flex-direction: column;
+	border:1px solid white;
+	justify-content: center;
+	align-content: center;
+	width: 500px;
+	text-align: center;
+	align-self: flex-start;
+	margin-bottom: 3rem;
+	margin: 0 5rem;
+	padding-bottom: 2rem;
+}
+.menu_card h1{
+	margin-bottom: 1rem;
+}
+.food_top{
+	display: flex;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	justify-content: space-between;
+}
+.food_top h3{
+	text-align: left;
+	justify-content: flex-start;
+}
+.food_prices{
+  	align-self: center;
+}
+.food_prices p{
+	text-align: right;
+}
+.previous,
+.next {
+	display:inline-flex;
+	cursor: pointer;
+	position: absolute;
+	width: auto;
+	height: 100%;
+	padding: 0 30px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+	text-align: center;
+	align-items: center;
+}
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.previous:hover,
+.next:hover {
+  	background-color: rgba(0, 0, 0, 0.8);
+}
