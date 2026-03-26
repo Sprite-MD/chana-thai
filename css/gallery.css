@@ -1,104 +1,153 @@
-#gallery{
-	display: flex;
-	flex-direction: column;
-	width: auto;
-}
-.preview {
-    width: 100%;
-}
-.gallery_img img{
-  vertical-align: bottom;
-}
-.gallery_row {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-.gallery_col{
-    width: 100%;
-    height: 100%;
-}
-
-/* Now you want to define what the lightbox will look like. Note that you have the display
-    as none. You don't want it to show until the user clicks on one of the previews. 
-    You will change this display property with JavaScript below. */
-    
-.modal {
-    display: none;
-    position: fixed;
-    padding: 10px 62px 0px 62px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: black;
-    z-index: 20; 
-}
-
-.modal-content {
-    position: relative;
+/* ── Gallery section ── */
+#gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
-    padding: 0;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.gallery-title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 0.4rem;
+    margin: 0 0 2.5rem;
+}
+
+/* ── Carousel container ── */
+.carousel-container {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    z-index:500;
-}
-
-/* set the display to none, to show one at a time. */
-.slide {
-        display: none;
-}
-
-.image-slide {
-        width: 100%;
-}
-
-.modal-preview {
-        width: 100%;
-}
-
-.dots {
+    max-width: 1820px;
+    height: 754px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-img.preview, img.modal-preview {
-        opacity: 1;
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1820px;
 }
 
-img.active,
-.preview:hover,
-.modal-preview:hover {
-        opacity: .6;
-}
-
-img.hover-shadow {
-        transition: 0.3s;
-}
-
-.hover-shadow:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} 
-
-.close {
-    color: rgb(204, 179, 179);
+/* ── Cards ── */
+.carousel-card {
     position: absolute;
-    top: 10px;
-    right: 150px;
-    font-size: 35px;
-    font-weight: bold;
-    z-index: 110;
+    width: 442px;
+    height: 598px;
+    left: 50%;
+    top: 50%;
+    /* No overflow: hidden — it flattens the element in preserve-3d, breaking hit-testing */
+    transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.3s ease;
+    cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 13px;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ── Dark overlay — replaces filter: brightness() to avoid 3D hit-test flattening ── */
+.carousel-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 13px;
+    pointer-events: none;
+    transition: background-color 0.55s ease;
+}
+
+/* ── Offset positions — set by JS via data-offset ── */
+
+.carousel-card[data-offset="0"] {
+    transform: translate(-50%, -50%) translateZ(0px) rotateY(0deg);
+    z-index: 10;
+    cursor: default;
+    pointer-events: none;
+}
+
+.carousel-card[data-offset="1"] {
+    transform: translate(-50%, -50%) translateX(332px) translateZ(-143px) rotateY(-22deg);
+    z-index: 9;
+}
+.carousel-card[data-offset="-1"] {
+    transform: translate(-50%, -50%) translateX(-332px) translateZ(-143px) rotateY(22deg);
+    z-index: 9;
+}
+.carousel-card[data-offset="1"]::after,
+.carousel-card[data-offset="-1"]::after {
+    background: rgba(0, 0, 0, 0.22);
+}
+
+.carousel-card[data-offset="2"] {
+    transform: translate(-50%, -50%) translateX(566px) translateZ(-312px) rotateY(-32deg);
+    z-index: 8;
+}
+.carousel-card[data-offset="-2"] {
+    transform: translate(-50%, -50%) translateX(-566px) translateZ(-312px) rotateY(32deg);
+    z-index: 8;
+}
+.carousel-card[data-offset="2"]::after,
+.carousel-card[data-offset="-2"]::after {
+    background: rgba(0, 0, 0, 0.40);
+}
+
+.carousel-card[data-offset="3"] {
+    transform: translate(-50%, -50%) translateX(741px) translateZ(-468px) rotateY(-40deg);
+    z-index: 7;
+}
+.carousel-card[data-offset="-3"] {
+    transform: translate(-50%, -50%) translateX(-741px) translateZ(-468px) rotateY(40deg);
+    z-index: 7;
+}
+.carousel-card[data-offset="3"]::after,
+.carousel-card[data-offset="-3"]::after {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.carousel-card[data-offset="hidden"] {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    transform: translate(-50%, -50%) translateZ(-910px);
+}
+
+/* Brighten side cards on hover by clearing the overlay */
+.carousel-card:not([data-offset="0"]):hover::after {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* ── Navigation arrows ── */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
     cursor: pointer;
+    z-index: 20;
+    padding: 12px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+.carousel-prev { left: 0; }
+.carousel-next { right: 0; }
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }

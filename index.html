@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
-        <title> Chana Thai </title> 
+        <title> Chana Thai </title>
         <meta charset='UTF-8'>
         <link rel='shortcut icon' type='image' href='images/favicon.ico'/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,10 +16,10 @@
             </a>
 
             <ul class='nav_btns'>
-                <li class='nav_list'> 
+                <li class='nav_list'>
                     <a href='#about'> About </a>
                 </li>
-                <li class='nav_list'> 
+                <li class='nav_list'>
                     <a href = '#menu'> Menu </a>
                  </li>
                 <li class='nav_list'>
@@ -31,7 +31,7 @@
             </ul>
         </nav>
 
-        <div class='hero' id='home'>
+        <section class='hero' id='home'>
             <div class='hero_content'>
                 <div class='hero_title'>
                     <h1> Chana Thai </h1>
@@ -41,33 +41,33 @@
                 </div>
             </div>
 
-        </div>
+        </section>
 
-        <div id='about'>
+        <section id='about'>
             <div class='about_row'>
-                <div class='about_content'> 
+                <div class='about_content'>
                     <h3> สวัสดี </h3>
                     <h2>About </h2>
-                    <p> Here at Chana Thai, we strive to bring you authentic Thai food in Inglewood. We put passion into all our food, 
+                    <p> Here at Chana Thai, we strive to bring you authentic Thai food in Inglewood. We put passion into all our food,
                         so that you can taste the myriad spices and flavor of Thai cuisine.
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id='menu'>
+        <section id='menu'>
             <div class='buttons'>
                 <div class = 'btn_row'>
-                    <button class='categories appetizers' onclick='display(0)'> Appetizers </button>
-                    <button class='categories soup_salad' onclick ='display(1) '> Soups & Salads </button>
-                    <button class='categories entrees' onclick='display(2)'> Entrees </button>
-                    <button class='categories alacarte' onclick='display(3)'> A la Carte </button>
+                    <button class='categories appetizers'> Appetizers </button>
+                    <button class='categories soup_salad'> Soups &amp; Salads </button>
+                    <button class='categories entrees'> Entrees </button>
+                    <button class='categories alacarte'> A la Carte </button>
                 </div>
-                <div class = 'btn_row'>
-                    <button class='categories chef_special' onclick='display(4)'> Chef Specials </button>
-                    <button class='categories lunch_combo' onclick='display(5)'> Lunch & Combo Specials </button>
-                    <button class='categories drink_dessert' onclick='display(6)'> Drinks & Desserts </button>
-                    <button class='categories sides' onclick='display(7)'> Sides </button>
+                <div class='btn_row'>
+                    <button class='categories chef_special'> Chef Specials </button>
+                    <button class='categories lunch_combo'> Lunch &amp; Combo Specials </button>
+                    <button class='categories drink_dessert'> Drinks &amp; Desserts </button>
+                    <button class='categories sides'> Sides </button>
                 </div>
             </div>
             <div class='menu_box'>
@@ -75,54 +75,50 @@
                 <div class='menu_list'></div>
             </div>
 
-            <a class="previous" onclick='change_menu(-1)'>&#10094;</a>
-            <a class="next" onclick='change_menu(1)'>&#10095;</a>
+            <a class="previous" id="menuPrev">&#10094;</a>
+            <a class="next" id="menuNext">&#10095;</a>
 
-            
-        </div>
 
-        <div id='gallery'>
-            <!-- Images used to open the lightbox -->
-            <div class='gallery_img'>
-                <div class="gallery_row">
-                    <div class="gallery_col">
-                    <img src="images/lightbox/duck.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="WIP" />
+        </section>
+
+        <section id='gallery'>
+            <h2 class="gallery-title">Gallery</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-card" data-index="0">
+                        <img src="images/lightbox/duck.jpg" alt="Roasted duck dish" />
                     </div>
-                    <div class="gallery_col"> 
-                    <img src="images/lightbox/greenCurry.jpg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="WIP" />
+                    <div class="carousel-card" data-index="1">
+                        <img src="images/lightbox/greenCurry.jpg" alt="Green curry" />
                     </div>
-                    <div class="gallery_col">
-                    <img src="images/lightbox/mincePork.jpg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="WIP" />
+                    <div class="carousel-card" data-index="2">
+                        <img src="images/lightbox/mincePork.jpg" alt="Minced pork dish" />
                     </div>
-                </div>
-                
-                <div class="gallery_row">
-                    <div class="gallery_col">
-                        <img src="images/lightbox/boatNoodle.jpg" onclick="openLightbox();toSlide(4)" class="hover-shadow preview" alt="WIP" />
+                    <div class="carousel-card" data-index="3">
+                        <img src="images/lightbox/boatNoodle.jpg" alt="Boat noodle soup" />
                     </div>
-                    <div class="gallery_col"> 
-                        <img src="images/lightbox/chickenSatay.jpg" onclick="openLightbox();toSlide(5)" class="hover-shadow preview" alt="WIP" />
+                    <div class="carousel-card" data-index="4">
+                        <img src="images/lightbox/chickenSatay.jpg" alt="Chicken satay skewers" />
                     </div>
-                    <div class="gallery_col">
-                        <img src="images/lightbox/porkStick.jpg" onclick="openLightbox();toSlide(6)" class="hover-shadow preview" alt="WIP" />
+                    <div class="carousel-card" data-index="5">
+                        <img src="images/lightbox/porkStick.jpg" alt="Pork on a stick" />
                     </div>
-                </div>
-                
-                <div class="gallery_row">
-                    <div class="gallery_col">
-                        <img src="images/lightbox/padThai.jpg" onclick="openLightbox();toSlide(7)" class="hover-shadow preview" alt="WIP" />
+                    <div class="carousel-card" data-index="6">
+                        <img src="images/lightbox/padThai.jpg" alt="Pad Thai noodles" />
                     </div>
-                    <div class="gallery_col"> 
-                        <img src="images/lightbox/tofu.jpg" onclick="openLightbox();toSlide(8)" class="hover-shadow preview" alt="WIP" />
+                    <div class="carousel-card" data-index="7">
+                        <img src="images/lightbox/tofu.jpg" alt="Tofu dish" />
                     </div>
-                    <div class="gallery_col">
-                        <img src="images/lightbox/redPork.jpg" onclick="openLightbox();toSlide(9)" class="hover-shadow preview" alt="WIP" />
+                    <div class="carousel-card" data-index="8">
+                        <img src="images/lightbox/redPork.jpg" alt="Red pork dish" />
                     </div>
                 </div>
+                <a class="carousel-prev" id="carouselPrev">&#10094;</a>
+                <a class="carousel-next" id="carouselNext">&#10095;</a>
             </div>
-        </div>
-        
-        <div id='contact'>
+        </section>
+
+        <section id='contact'>
             <div class='contact_row'>
                 <div class='contact_column'>
                     <h1> Visit Us </h1>
@@ -142,84 +138,29 @@
                     <p> Closed </p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!--Lightbox code, contained in modal all the images, controls, and another set of preview images
-			as the dots are in here. Dots show users which image is currently active-->
-        <div id="Lightbox" class="modal">
-            <div class="click_out">
-                <span class="close pointer" onclick="closeLightbox()">&times;</span>
-                <div class="modal-content">
-                <div class="slide">
-                    <img src="images/lightbox/duck.jpg" class="image-slide" alt="Toy car on the road." />
-                </div>
-                <div class="slide">
-                    <img src="images/lightbox/greenCurry.jpg" class="image-slide" alt="Toy car exploring offroad." />
-                </div>    
-                <div class="slide">
-                    <img src="images/lightbox/mincePork.jpg" class="image-slide" alt="Toy car in the city." />
-                </div>
-                
-                    <div class="slide">
-                        <img src="images/lightbox/boatNoodle.jpg" class="image-slide" alt="Toy car in the city." />
-                    </div>
-                    <div class="slide">
-                        <img src="images/lightbox/chickenSatay.jpg" class="image-slide" alt="Toy car in the city." />
-                    </div>
-                    <div class="slide">
-                        <img src="images/lightbox/porkStick.jpg" class="image-slide" alt="Toy car in the city." />
-                    </div>
-
-                    <div class="slide">
-                        <img src="images/lightbox/padThai.jpg" class="image-slide" alt="Toy car in the city." />
-                    </div>
-                    <div class="slide">
-                        <img src="images/lightbox/tofu.jpg" class="image-slide" alt="Toy car in the city." />
-                    </div>
-                    <div class="slide">
-                        <img src="images/lightbox/redPork.jpg" class="image-slide" alt="Toy car in the city." />
-                    </div>
-                
-                    <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-                
-                    <div class="dots">
-                        <div class="gallery_col">
-                            <img src="images/lightbox/duck.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road" />
-                        </div>
-                        <div class="gallery_col">
-                            <img src="images/lightbox/greenCurry.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." />
-                        </div>
-                        <div class="gallery_col">
-                            <img src="images/lightbox/mincePork.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city." />
-                        </div>
-
-                        <div class="gallery_col">
-                            <img src="images/lightbox/boatNoodle.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="Toy car on the road" />
-                        </div>
-                        <div class="gallery_col">
-                            <img src="images/lightbox/chickenSatay.jpg" class="modal-preview hover-shadow" onclick="toSlide(5)" alt="Toy car on the road" />
-                        </div>
-                        <div class="gallery_col">
-                            <img src="images/lightbox/porkStick.jpg" class="modal-preview hover-shadow" onclick="toSlide(6)" alt="Toy car on the road" />
-                        </div>
-                        
-                        <div class="gallery_col">
-                            <img src="images/lightbox/padThai.jpg" class="modal-preview hover-shadow" onclick="toSlide(7)" alt="Toy car on the road" />
-                        </div>
-                        <div class="gallery_col">
-                            <img src="images/lightbox/tofu.jpg" class="modal-preview hover-shadow" onclick="toSlide(8)" alt="Toy car on the road" />
-                        </div>
-                        <div class="gallery_col">
-                            <img src="images/lightbox/redPork.jpg" class="modal-preview hover-shadow" onclick="toSlide(9)" alt="Toy car on the road" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <footer>
+            <p>© 2024 Chana Thai. All rights reserved.</p>
+        </footer>
 
         <script src='menu.js'></script>
-        <script src="lightbox.js"></script>    
+        <script src="lightbox.js"></script>
+
+        <script>
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav_list a');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(a => a.classList.remove('active'));
+                        const link = document.querySelector(`.nav_list a[href="#${entry.target.id}"]`);
+                        if (link) link.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.4 });
+            sections.forEach(s => observer.observe(s));
+        </script>
 
     </body>
 </html>

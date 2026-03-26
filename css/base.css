@@ -1,0 +1,26 @@
+:root {
+    --color-primary: orange;
+    --color-accent: rgb(226, 146, 27);
+    --color-bg: black;
+    --color-text: white;
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html {
+    scroll-padding-top: 65px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    font-size: 24px;
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    min-width: 100%;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}

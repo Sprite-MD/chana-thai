@@ -1,7 +1,7 @@
 #about{
     padding:5em 0;
     text-align: center;
-    background-color: rgb(226, 146, 27);
+    background-color: var(--color-accent);
 }
 .about_content{
     max-width: 760px;

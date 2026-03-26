@@ -11,8 +11,28 @@
 .contact_column{
     flex:1;
     text-align: center;
-    margin: 0 180px;
+    margin: 0 clamp(1rem, 8vw, 180px);
 }
-.contact_column a{
-    text-decoration: underline;
+.contact_column a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact_column a:hover {
+    background-color: var(--color-primary);
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    background: #111;
+    color: #888;
+    font-size: 0.85rem;
 }

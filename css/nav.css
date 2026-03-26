@@ -5,7 +5,7 @@
     left: 0px;
     width: 100%;
     z-index: 10;
-    background-color: orange;
+    background-color: var(--color-primary);
     align-items: center;
 	height: 65px;
 }
@@ -27,4 +27,16 @@
 .nav_list{
     margin: 40px;
     list-style-type: none;
+}
+
+.nav_list a {
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.nav_list a.active {
+    border-bottom: 2px solid black;
 }

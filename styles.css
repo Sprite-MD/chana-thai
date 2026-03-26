@@ -1,352 +1,34 @@
-body{
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-size: 24px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: black;
-	min-width: 100vw;
-}
-a{
-    color: white;
-    text-decoration: none;
-}
-
-
-#navbar{
-    display: flex;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 10;
-    background-color: orange;
-    align-items: center;
-	height: 65px;
-}
-#navbar img{
-    height: 55px;
-}
-.nav_btns{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: auto;
-
-}
-.nav_list{
-    margin: 40px;
-    list-style-type: none;
-}
-
-/* Hero Page Section */
-.hero{
-    display: flex;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-.hero::before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-image: url(images/hero_bg.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    filter: brightness(90%);
-}
-.hero_content{
-    text-align: center;
-    position: relative;
-    color: white;
-    margin: 0.625rem;
-}
-.hero_title{
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 0;
-}
-.hero_sub{
-    font-size: 2rem;
-    font-weight: 200;
-    margin-top: 1rem;
-}
- 
-/* About Section */
-#about{
-    padding:5em 0;
-    text-align: center;
-    background-color: rgb(226, 146, 27);
-}
-.about_content{
-    max-width: 760px;
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-#about h3{
-    margin-bottom: 1em;
-    opacity: .5;
-}
-#about h2{
-	font-size: 3.375em;
-	margin-block-start: .83em;
-	margin-block-end: .83em;
-}
-
-/* Menu Section */
-#menu{
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
-	position: relative;
-}
-.buttons{
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	align-self: center;
-	margin-top: 6rem;
-}
-.categories{
-	align-content: center;
-	justify-content: center;
-	padding: 8px;
-	margin: 10px;
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
-.additionals{
-	text-align: center;
-}
-.menu_row{
-	display: flex;
-	justify-content: center;
-	margin:5rem;
-}
-.menu_card{
-	display: flex;
-	flex-direction: column;
-	border:1px solid white;
-	justify-content: center;
-	align-content: center;
-	width: 500px;
-	text-align: center;
-	align-self: flex-start;
-	margin-bottom: 3rem;
-	margin: 0 5rem;
-	padding-bottom: 2rem;
-}
-.menu_card h1{
-	margin-bottom: 1rem;
-}
-.food_top{
-	display: flex;
-	margin-right: 1rem;
-	margin-left: 1rem;
-	justify-content: space-between;
-}
-.food_top h3{
-	text-align: left;
-	justify-content: flex-start;
-}
-.food_prices{
-  	align-self: center;
-}
-.food_prices p{
-	text-align: right;
-}
-.previous,
-.next {
-	display:inline-flex;
-	cursor: pointer;
-	position: absolute;
-	width: auto;
-	height: 100%;
-	padding: 0 30px;
-	color: white;
-	font-weight: bold;
-	font-size: 20px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-	-webkit-user-select: none;
-	text-align: center;
-	align-items: center;
-}
-.next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-.previous:hover,
-.next:hover {
-  	background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Image Gallery Section */
-#gallery{
-	display: flex;
-	flex-direction: column;
-	width: auto;
-}
-.preview {
-    width: 100%;
-}
-.gallery_img img{
-  vertical-align: bottom;
-}
-.gallery_row {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-.gallery_col{
-    width: 100%;
-    height: 100%;
-}
-  
-/* Now you want to define what the lightbox will look like. Note that you have the display
-    as none. You don't want it to show until the user clicks on one of the previews. 
-    You will change this display property with JavaScript below. */
-    
-.modal {
-	display: none;
-	position: fixed;
-	padding: 10px 62px 0px 62px;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: black;
-	z-index: 20; 
-}
-
-.modal-content {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: auto;
-	padding: 0;
-	width: 100%;
-	max-width: 1200px;
-	height: 100%;
-	z-index:500;
-}
-
-/* set the display to none, to show one at a time. */
-.slide {
-  	display: none;
-}
-
-.image-slide {
- 	width: 100%;
-}
-
-.modal-preview {
-  	width: 100%;
-}
-
-.dots {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-img.preview, img.modal-preview {
-  	opacity: 1;
-}
-
-img.active,
-.preview:hover,
-.modal-preview:hover {
-  	opacity: .6;
-}
-
-img.hover-shadow {
-  	transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} 
-
-.close {
-	color: rgb(204, 179, 179);
-	position: absolute;
-	top: 10px;
-	right: 150px;
-	font-size: 35px;
-	font-weight: bold;
-	z-index: 110;
-}
-
-.close:hover,
-.close:focus {
-	color: #999;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-/* Contact Section */
-#contact{
-    display:flex;
-    padding: 0 40px;
-    align-items: center;
-    justify-content: center;
-}
-.contact_row{
-    display: flex;
-    justify-content: space-between;
-}
-.contact_column{
-    flex:1;
-    text-align: center;
-    margin: 0 180px;
-}
-.contact_column a{
-    text-decoration: underline;
-}
+@import url('css/base.css');
+@import url('css/nav.css');
+@import url('css/hero.css');
+@import url('css/about.css');
+@import url('css/menu.css');
+@import url('css/gallery.css');
+@import url('css/contact.css');
 
 /* Mobile Configurations */
-@viewport {
-	width: device-width;
-	zoom: 1.0;
-}
-
-@media (max-width: 1000px){
-	#navbar{
+@media (max-width: 1000px) {
+	#navbar {
 		display: flex;
 		top: 0px;
 		left: 0px;
 		width: 100%;
 		z-index: 10;
-		background-color: orange;
+		background-color: var(--color-primary);
 		align-items: center;
 	}
-	
-	#menu{
+
+	#menu {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
 		position: relative;
 	}
 
-	.menu_card{
+	.menu_card {
 		display: flex;
 		flex-direction: column;
-		border:1px solid white;
+		border: 1px solid white;
 		width: 100%;
 		text-align: center;
 		align-self: flex-start;
@@ -355,16 +37,16 @@ img.hover-shadow {
 		padding-bottom: 2rem;
 	}
 
-	.contact_row{
+	.contact_row {
 		flex-direction: column;
 		justify-content: space-between;
 	}
 
-	.menu_row{
+	.menu_row {
 		flex-direction: column;
 	}
 
-	.buttons{
+	.buttons {
 		flex-direction: column;
 		align-content: center;
 		justify-content: center;

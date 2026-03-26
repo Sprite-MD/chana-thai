@@ -1,55 +1,38 @@
-// Initialize default state and run slide
+const cards = Array.from(document.querySelectorAll('.carousel-card'));
+const total = cards.length;
+let activeIndex = 0;
 
-let slideIndex = 1;
-showSlide(slideIndex);
-
-function openLightbox() {
-  document.getElementById('Lightbox').style.display = 'block';
+function updateCarousel() {
+    cards.forEach((card, i) => {
+        let offset = i - activeIndex;
+        // Normalize to shortest circular distance so cards wrap around
+        if (offset > total / 2)  offset -= total;
+        if (offset < -total / 2) offset += total;
+        card.dataset.offset = Math.abs(offset) > 3 ? 'hidden' : String(offset);
+    });
 }
 
-function closeLightbox() {
-  document.getElementById('Lightbox').style.display = 'none';
-};
-
-function changeSlide(n) {
-  showSlide(slideIndex += n);
-};
-
-function toSlide(n) {
-  showSlide(slideIndex = n);
-};
-
-// Lighthouse logic: which slide to show 
-// and which dot is active.
-
-function showSlide(n) {
-  const slides = document.getElementsByClassName('slide');
-  let modalPreviews = document.getElementsByClassName('modal-preview');
-
-  if (n > slides.length) {
-    slideIndex = 1;	
-  };
-  
-  if (n < 1) {
-    slideIndex = slides.length;
-  };
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  };
-  
-  for (let i = 0; i < modalPreviews.length; i++) {
-    modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
-  };
-  
-  slides[slideIndex - 1].style.display = 'block';
-  modalPreviews[slideIndex - 1].className += ' active';
-};
-
-let modal = document.querySelector('#Lighthouse');
-window.onclick = (e) => {
-	if (e.target == modal){
-		modal.style.display = 'none';
-
-	}
+function goTo(index) {
+    activeIndex = ((index % total) + total) % total;
+    updateCarousel();
 }
+
+// Prev / Next arrows
+document.getElementById('carouselPrev').addEventListener('click', () => goTo(activeIndex - 1));
+document.getElementById('carouselNext').addEventListener('click', () => goTo(activeIndex + 1));
+
+// Click a side card to jump to it
+cards.forEach((card, i) => {
+    card.addEventListener('click', () => {
+        if (card.dataset.offset !== '0') goTo(i);
+    });
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') goTo(activeIndex + 1);
+    if (e.key === 'ArrowLeft')  goTo(activeIndex - 1);
+});
+
+// Init
+updateCarousel();

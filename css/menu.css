@@ -7,58 +7,110 @@
 }
 .buttons{
 	display: flex;
+	flex-direction: column;
 	align-content: center;
 	justify-content: center;
 	align-self: center;
-	margin-top: 6rem;
+	margin-top: 2rem;
+}
+.btn_row {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .categories{
-	align-content: center;
-	justify-content: center;
-	padding: 8px;
-	margin: 10px;
-	margin-top: 2em;
-	margin-bottom: 2em;
+	background: transparent;
+	border: 2px solid var(--color-primary);
+	color: var(--color-text);
+	padding: 0.5rem 1.25rem;
+	margin: 6px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: var(--font-family);
+	font-size: 0.95rem;
+	transition: background-color 0.2s ease, color 0.2s ease;
 }
+.categories:hover,
+.categories.active {
+	background-color: var(--color-primary);
+	color: black;
+}
+/* #5, #11 — additionals separator + consistent weight */
 .additionals{
 	text-align: center;
+	padding: 1rem 0 0.5rem;
+	font-weight: normal;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	margin: 0 3.75rem;
 }
+.additionals p {
+	font-weight: normal;
+	margin: 0.25rem 0;
+}
+/* #1 — stretch cards to equal height in a row */
 .menu_row{
 	display: flex;
 	justify-content: center;
-	margin:5rem;
+	align-items: stretch;
+	margin: 3.75rem;
 }
+/* #6, #10 — softer border, remove align-self: flex-start so cards stretch */
 .menu_card{
 	display: flex;
 	flex-direction: column;
-	border:1px solid white;
-	justify-content: center;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	justify-content: flex-start;
 	align-content: center;
-	width: 500px;
+	min-width: 375px;
+	font-size: 0.75em;
 	text-align: center;
-	align-self: flex-start;
-	margin-bottom: 3rem;
-	margin: 0 5rem;
-	padding-bottom: 2rem;
+	margin: 0 3.75rem;
+	padding-bottom: 1.5rem;
 }
 .menu_card h1{
-	margin-bottom: 1rem;
+	margin-bottom: 0.75rem;
+}
+.menu_columns {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+.menu_col {
+	flex: 1;
+	border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+.menu_col:first-child {
+	border-left: none;
 }
 .food_top{
 	display: flex;
-	margin-right: 1rem;
-	margin-left: 1rem;
+	margin-right: 0.75rem;
+	margin-left: 0.75rem;
 	justify-content: space-between;
+	gap: 0.5rem;
 }
 .food_top h3{
 	text-align: left;
 	justify-content: flex-start;
 }
+/* #2, #4 — price pinned right, no overflow */
 .food_prices{
-  	align-self: center;
+	align-self: center;
+	flex-shrink: 0;
+	white-space: nowrap;
 }
 .food_prices p{
 	text-align: right;
+}
+/* #5 — description de-emphasised */
+.food_item p {
+	opacity: 0.7;
+	font-size: 0.9em;
+	margin: 0.2rem 0.75rem 0.4rem;
+}
+/* #4 — tighter spacing when no description */
+.food_item.no-desc {
+	margin-bottom: 0.1rem;
 }
 .previous,
 .next {
